@@ -105,22 +105,6 @@
     li {
       margin-bottom: 6px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0 24px 0;
-      font-size: 13px;
-    }
-    th, td {
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      text-align: left;
-    }
-    th {
-      background: rgba(255,255,255,0.05);
-      color: #FFFFFF;
-      font-weight: 600;
-    }
     .card {
       background: rgba(15, 23, 42, 0.6);
       border: 1px solid var(--border);
@@ -142,7 +126,7 @@
   <div class="container">
     <div class="badge">Official Documentation</div>
     <h1>MoneyVaults: Finances & FIRE — User Manual</h1>
-    <div class="subtitle">Complete reference guide for personal wealth tracking, compound simulations, and vaults.</div>
+    <div class="subtitle">Complete reference guide for personal wealth tracking, compound simulations, stock vaults, and dividends.</div>
 
     <div class="nav-bar">
       <a class="nav-link" href="index.html">← Legal & Privacy Center</a>
@@ -152,50 +136,66 @@
     <h2>🏛️ 1. Philosophy & Architecture</h2>
     <p>MoneyVaults is built upon an <strong>offline-first architecture</strong>. Your data is your property: no cloud servers require your financial records, no third-party tracking scripts log your income, and no bank credentials are ever requested.</p>
 
-    <h2>🗄️ 2. Vault Management</h2>
+    <h2>🗄️ 2. Vault Management & Stock Portfolios</h2>
     <div class="card">
       <p><strong>Vault Categories:</strong></p>
       <ul>
         <li><strong>Piggy Bank:</strong> Goals with target amounts and milestone progress bars.</li>
         <li><strong>Emergency Fund:</strong> Calculates monthly burn rate and runway months covered.</li>
         <li><strong>Investment:</strong> Simulates compound growth, dividend projections, and capital goals.</li>
+        <li><strong>Stock / Equity:</strong> Track ticker symbols, units, average cost (PRU), live P&L, and dedicated Buy & Sell orders.</li>
         <li><strong>Expense:</strong> Fastfill-enabled accounts for seamless one-tap daily spending.</li>
       </ul>
-      <p><strong>Custom Styling:</strong> Personalize each vault with custom icons and colors. The progress bar automatically synchronizes with the vault's icon color.</p>
+      <p><strong>Independent Cash Flow ("Deduct from Income" Switch):</strong> Log expenses for budget tracking without subtracting from liquid cash balances (ideal for reimbursed expenses or prepaid budgets).</p>
+      <p><strong>Tag Manager:</strong> Create and color-code custom tags to classify transactions and filter views effortlessly.</p>
     </div>
 
-    <h2>🧮 3. Financial Calculators Suite</h2>
+    <h2>💰 3. Dividend Tracker & Stock Sync</h2>
+    <div class="card">
+      <p>Track passive income from equity holdings:</p>
+      <ul>
+        <li><strong>Distributions:</strong> Log one-time or recurring (monthly, quarterly, annual) dividends.</li>
+        <li><strong>Stock Link:</strong> Connect dividends to stock vaults to estimate payouts based on shares owned.</li>
+        <li><strong>Tax Withholding:</strong> Configure withholding rates to project realistic net take-home cash.</li>
+        <li><strong>Payout Confirmations:</strong> Confirm dividends upon payment directly into Cash Flow.</li>
+      </ul>
+    </div>
+
+    <h2>📅 4. Future Planned Transactions</h2>
+    <p>Schedule future commitments with target dates. Planned items do not affect your current liquid balance until their due date, when the app prompts you to confirm or settle.</p>
+
+    <h2>📊 5. Vaults Monthly Evolution</h2>
+    <p>Visualize portfolio growth with interactive multi-month stacked bar charts across 3-month and 6-month horizons, switching between Cumulative Balance and Monthly Net Flow with native localized month names.</p>
+
+    <h2>🧮 6. Financial Calculators Suite</h2>
     <ul>
-      <li><strong>Compound Growth & FIRE:</strong> Project wealth over horizons up to 50 years, compute your FIRE number, and analyze compound vs deposits.</li>
+      <li><strong>Compound Growth & FIRE:</strong> Project wealth over horizons up to 50 years, compute your FIRE retirement number, and analyze compound interest vs deposits.</li>
       <li><strong>Dividend Growth & Yield:</strong> DRIP reinvestment modeling, gross/net yield, and taxation analysis.</li>
       <li><strong>Loan Amortization:</strong> Transparent schedule separating regular principal, extra amortizations, interest, and remaining balance.</li>
       <li><strong>Discount Calculator (100% Free):</strong> Single and parallel discount comparisons with sales tax.</li>
     </ul>
 
-    <h2>🔁 4. Recurring Transactions & Smart Device Alerts</h2>
+    <h2>🔁 7. Recurring Transactions & Smart Device Alerts</h2>
     <div class="card">
       <p>Automate routine expenses, income, subscriptions, and investments:</p>
       <ul>
         <li><strong>Flexible Schedules:</strong> Every <i>x</i> Days, Weeks, Months, or Years with custom due dates (1–31) and exact notification times.</li>
-        <li><strong>Device Alerts:</strong> Local push notifications with 1-tap <strong>Confirm & Log</strong> or <strong>Skip</strong>.</li>
-        <li><strong>Free Tier:</strong> Free accounts monitor up to 3 active recurring rules. Premium unlocks unlimited rules.</li>
+        <li><strong>Device Alerts:</strong> Local push notifications with 1-tap <strong>Confirm & Log</strong>, <strong>Modify & Log</strong>, or <strong>Skip</strong>.</li>
       </ul>
     </div>
 
-    <h2>🌐 5. Multi-Language & Universal Currency</h2>
+    <h2>🎓 8. Interactive Step-by-Step Tutorials</h2>
+    <p>7 guided walkthrough modal dialogs covering General Account, Investment Vaults, Recurring Rules, Planned Transactions, Stocks Vault, Dividend Tracker, and Cash Flow Independence across 6 languages.</p>
+
+    <h2>🌐 9. Multi-Language & Universal Currency</h2>
     <p>MoneyVaults natively supports 6 languages (English, Portuguese, Spanish, French, Italian, German) and universal world currencies (&euro;, $, &pound;, R$, &yen;, CHF, etc.) with automatic system matching and on-demand switching.</p>
 
-    <h2>☁️ 6. Data Center & Cloud Backup</h2>
+    <h2>☁️ 10. Data Center & Cloud Backup</h2>
     <p>You can create 1-tap backups to Google Drive, iCloud, or local storage anytime through the <strong>Data Center</strong>. Data is exported as clean, encrypted JSON files that can be restored on any device without loss.</p>
 
-    <h2>👑 7. Plans & Restoring Purchases</h2>
-    <p>Standard users can create 1 vault per category, monitor up to 3 recurring rules, preview all tools, and unlock 1-minute Pro Passes via rewarded videos (up to 5 per 24h). Premium permanently unlocks unlimited vaults, unlimited recurring rules, full interactive calculators, and portfolio weights.</p>
-    <p>To restore your purchases on a new device, tap <strong>Restore Purchases</strong> in the Plan screen.</p>
-
     <div class="footer">
-      <p>© 2026 MoneyVaults. All rights reserved. • Support: support@compoundly.com</p>
+      <p>© 2026 MoneyVaults. All rights reserved. • Support: compoundlysupport@gmail.com</p>
     </div>
   </div>
 </body>
 </html>
-

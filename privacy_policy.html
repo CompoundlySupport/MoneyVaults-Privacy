@@ -56,6 +56,7 @@
     }
     .nav-bar {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
       margin: 20px 0 24px 0;
       padding-bottom: 16px;
@@ -156,7 +157,7 @@
   <div class="container">
     <div class="badge">Legal & Privacy Center</div>
     <h1>MoneyVaults: Finances & FIRE</h1>
-    <div class="last-updated">Effective Date & Last Updated: October 9, 2026</div>
+    <div class="last-updated">Effective Date & Last Updated: October 14, 2026</div>
 
     <div class="nav-bar">
       <a href="#privacy" class="nav-btn active">1. Privacy Policy</a>
@@ -170,29 +171,32 @@
       <h2>🛡️ Part I: Privacy Policy</h2>
 
       <div class="highlight-box">
-        <strong>Offline-First Privacy Architecture:</strong> MoneyVaults: Finances & FIRE stores your financial records, vaults, expenses, and transaction logs locally on your device. We do not require account registration, and we do not transmit your personal financial logs to developer servers.
+        <strong>Offline-First Privacy Architecture:</strong> MoneyVaults: Finances & FIRE stores your financial records, smart vaults, stock positions, dividend entries, and transaction logs locally on your device. We do not require account registration, and we do not transmit your personal financial logs to developer servers.
       </div>
 
       <h3>1. Information We Do NOT Collect</h3>
-      <p>Because MoneyVaults operates primarily offline on your device, we do not collect or store:</p>
+      <p>Because MoneyVaults operates offline on your device, we do not collect or store:</p>
       <ul>
-        <li>Personal identifiers such as your real name, physical address, or phone number.</li>
+        <li>Personal identifiers such as your real name, physical address, email address, or phone number.</li>
         <li>Bank credentials, bank account numbers, credit card details, or banking logins.</li>
-        <li>Your specific budget entries, savings goals, transactions, or investment portfolio amounts.</li>
+        <li>Your specific budget entries, savings goals, asset trades, dividend distributions, or net worth values.</li>
       </ul>
 
       <h3>2. Data Processed Locally on Your Device</h3>
       <p>The following data remains strictly inside your local device storage:</p>
       <ul>
-        <li><strong>Vaults & Transactions:</strong> Bucket names, amounts, categories, dates, and simulated return rates.</li>
-        <li><strong>Recurring Rules & Alerts:</strong> Locally scheduled recurring cash flows and device push notifications.</li>
-        <li><strong>User Preferences:</strong> Selected currency symbol (e.g. €, $, £, R$), language settings, reminder schedules, and display views.</li>
+        <li><strong>Smart Vaults & Asset Portfolios:</strong> Vault names, target amounts, categories, and dedicated stock/equity portfolios (ticker symbols, units owned, average acquisition cost PRU, market prices, and buy/sell trade logs).</li>
+        <li><strong>Cash Flow & Planned Commitments:</strong> Everyday transactions, planned future expenses with due dates, and non-deducted budget records ("Deduct from Income" toggle).</li>
+        <li><strong>Dividend Tracker:</strong> Payout amounts, tax withholding rates, payment frequency, and stock vault linkages.</li>
+        <li><strong>Recurring Rules & Alerts:</strong> Scheduled recurring rules, monthly due days, and local device push notifications.</li>
+        <li><strong>Tags & Categories:</strong> User-defined custom tags, color palettes, and category mappings.</li>
+        <li><strong>User Preferences:</strong> Base currency formatting, multilingual settings, and view modes (compact vs expanded).</li>
         <li><strong>Temporary Pro Passes:</strong> Local timestamp tracking expiration of ad-rewarded Pro Passes (1 minute each, up to 5 per 24-hour window).</li>
         <li><strong>Backups:</strong> Manual JSON backup files generated solely when you choose to export your data.</li>
       </ul>
 
       <h3>3. Third-Party Services & Technical Data</h3>
-      <p>The App integrates trusted industry-standard SDKs for subscriptions and optional rewarded passes:</p>
+      <p>The App integrates trusted industry-standard SDKs solely for subscriptions and optional rewarded passes:</p>
       <ul>
         <li>
           <strong>In-App Purchases (RevenueCat & Google Play Billing):</strong> Processes anonymous app user IDs, transaction receipts, active subscription status, and purchase dates to unlock and restore Premium features. 
@@ -206,7 +210,7 @@
 
       <h3>4. Device Permissions</h3>
       <ul>
-        <li><strong>POST_NOTIFICATIONS:</strong> Used only for optional, locally scheduled expense check-ins, weekly wealth reviews, and recurring transaction due alerts.</li>
+        <li><strong>POST_NOTIFICATIONS:</strong> Used only for optional, locally scheduled expense check-ins, weekly wealth reviews, recurring transaction due alerts, and dividend reminders.</li>
         <li><strong>INTERNET:</strong> Required only for Google Play Billing validation and AdMob video playback.</li>
       </ul>
 
@@ -231,11 +235,12 @@
 
       <h3>2. No Financial, Investment, or Legal Advice</h3>
       <p>
-        The calculations, compound interest models, loan amortization schedules, and FIRE (Financial Independence, Retire Early) projections generated by MoneyVaults are for <strong>educational and informational simulation purposes only</strong>.
+        The calculations, compound interest models, stock tracking analytics, dividend forecasts, loan amortization schedules, and FIRE (Financial Independence, Retire Early) projections generated by MoneyVaults are for <strong>educational and informational simulation purposes only</strong>.
       </p>
       <ul>
+        <li>The App is not a broker-dealer or financial advisor. Stock market prices, units, and dividends are user-entered and managed for tracking purposes.</li>
         <li>The App does not guarantee future financial returns or investment outcomes.</li>
-        <li>Past performance or mathematical models do not guarantee future wealth.</li>
+        <li>Past mathematical performance or simulation curves do not guarantee future wealth.</li>
         <li>You are solely responsible for verifying any figures before making financial commitments. Consult a qualified professional for certified financial advice.</li>
       </ul>
 

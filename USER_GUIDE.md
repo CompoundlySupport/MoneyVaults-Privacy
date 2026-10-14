@@ -9,18 +9,28 @@ Welcome to **MoneyVaults: Finances & FIRE**, the modern, offline-first personal 
 1. [Philosophy & Architecture](#-philosophy--architecture)
 2. [Quick Start Guide](#-quick-start-guide)
 3. [Understanding Vault Types](#-understanding-vault-types)
+   - [Savings Goals & Emergency Funds](#savings-goals-emergency-funds)
+   - [Dedicated Stock & Asset Vaults (PRU, Units & P&L)](#dedicated-stock--asset-vaults)
 4. [Cash Flow & Transactions](#-cash-flow--transactions)
-5. [Recurring Transactions & Smart Alerts](#-recurring-transactions--smart-alerts)
-6. [Portfolio Allocation & Weights](#-portfolio-allocation--weights)
-7. [Financial Calculators Suite](#-financial-calculators-suite)
-   - [Compound Growth & FIRE Calculator](#1-compound-growth--fire-calculator)
-   - [Dividend Growth & Yield Calculator](#2-dividend-growth--yield-calculator)
-   - [Loan Amortization & Early Payoff](#3-loan-amortization--early-payoff)
-   - [Smart Discount Calculator](#4-smart-discount-calculator)
-8. [Data Center, Cloud Backup & Privacy](#-data-center-cloud-backup--privacy)
-9. [Membership Plans (Standard vs Premium)](#-membership-plans-standard-vs-premium)
-10. [Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
-11. [Support & Contact](#-support--contact)
+   - [Fastfill One-Tap Logging](#fastfill-one-tap-logging)
+   - [Cash Flow Independence (Deduct from Income Switch)](#cash-flow-independence)
+   - [Tag Manager & Custom Filtering](#tag-manager--custom-filtering)
+5. [Future Planned Transactions](#-future-planned-transactions)
+6. [Recurring Transactions & Smart Alerts](#-recurring-transactions--smart-alerts)
+7. [Dividend Tracker & Stock Vault Sync](#-dividend-tracker--stock-vault-sync)
+8. [Vaults Monthly Evolution & Trends](#-vaults-monthly-evolution--trends)
+9. [Portfolio Allocation & Weights](#-portfolio-allocation--weights)
+10. [Financial Calculators Suite](#-financial-calculators-suite)
+    - [Compound Growth & FIRE Calculator](#1-compound-growth--fire-calculator)
+    - [Dividend Growth & Yield Calculator](#2-dividend-growth--yield-calculator)
+    - [Loan Amortization & Early Payoff](#3-loan-amortization--early-payoff)
+    - [Smart Discount Calculator](#4-smart-discount-calculator)
+11. [Interactive Tutorials](#-interactive-tutorials)
+12. [Smart Reminders & Notifications](#-smart-reminders--notifications)
+13. [Data Center, Cloud Backup & Privacy](#-data-center-cloud-backup--privacy)
+14. [Membership Plans (Standard vs Premium)](#-membership-plans-standard-vs-premium)
+15. [Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
+16. [Support & Contact](#-support--contact)
 
 ---
 
@@ -28,22 +38,22 @@ Welcome to **MoneyVaults: Finances & FIRE**, the modern, offline-first personal 
 
 MoneyVaults is built upon three non-negotiable principles:
 
-* **100% Offline-First Privacy:** Your finances are your business. MoneyVaults does not require an account, does not connect to external financial servers, and never sells your data. All records remain encrypted locally on your device.
-* **Mathematical Precision:** No ambiguous projections. Every compound growth curve, loan amortization schedule, and portfolio weighting formula is built on transparent, textbook financial math.
-* **Frictionless Daily Tracking:** With customizable **Fastfill** buttons, logging a daily expense takes less than two seconds.
+* **100% Offline-First Privacy:** Your finances are your business. MoneyVaults does not require an account, does not connect to external financial servers, and never sells or uploads your data. All records remain encrypted locally on your device.
+* **Mathematical Precision:** No ambiguous projections. Every compound growth curve, loan amortization schedule, and portfolio weighting formula is built on transparent textbook financial math.
+* **Frictionless Daily Tracking:** With customizable **Fastfill** buttons and independent cash flow switches, logging a daily transaction or portfolio rebalancing takes less than two seconds.
 
 ---
 
 ## 🚀 Quick Start Guide
 
 1. **Set Your Base Currency:**  
-   Open the app, tap the currency indicator or open settings from the top menu, and select your preferred currency symbol (`€`, `$`, `£`, `¥`, `CHF`, `R$`, etc.).
+   Open settings or tap the currency indicator to choose your preferred currency symbol (`€`, `$`, `£`, `¥`, `CHF`, `R$`, etc.).
 2. **Review Default Vaults:**  
    Head to the **Vaults** tab to see your foundational accounts (General Account, Emergency Fund, Investment Vault).
 3. **Log Your First Cash Flow:**  
-   Tap the prominent **`+`** button at the bottom center to add an Income or Expense.
-4. **Explore the Calculators:**  
-   Visit the **Tools** tab to simulate compound interest milestones, plan loan repayments, or calculate dividend reinvestments.
+   Tap the central **`+`** button in the bottom navigation to add an Income or Expense.
+4. **Explore the Tutorials:**  
+   Open the top menu and tap **Tutorials** to view interactive modal walkthroughs covering all core concepts.
 
 ---
 
@@ -56,149 +66,158 @@ MoneyVaults organizes your wealth into dedicated, purpose-built vaults:
 | **💰 Piggy Bank (Savings Goal)** | Short-to-medium term savings goals (Vacation, Car, Tech). | Target amount, percentage progress bar, milestone tracking. |
 | **🛡️ Emergency Fund** | Runway reserve for peace of mind. | Monthly burn rate calculator, months of runway covered. |
 | **📈 Investment & Wealth** | Compounding assets (ETFs, Stocks, Real Estate, Crypto). | Compound growth engine, auto-reinvestment simulation, capital target. |
+| **📊 Stock / Equity Vault** | Individual stocks & ETF portfolio positions. | Ticker symbol, unit tracking, average acquisition cost (PRU), live P&L. |
 | **💳 Expense & Budget** | Daily operational spending (Groceries, Dining, Utilities). | Fastfill one-tap logging, categorized expenditure summaries. |
 
-### Vault Customization (Colors, Icons & Progress Bars)
-Each vault can be personalized:
-* Tap the three dots (`⋮`) on any vault card and choose **Edit**.
-* Select a custom icon from the financial icon library.
-* Pick a color from the curated palette. The vault's **progress bar automatically matches the selected icon color**.
+<a id="dedicated-stock--asset-vaults"></a>
+### Dedicated Stock & Asset Vaults
+* **Ticker Symbol:** Assign real market tickers (e.g., `AAPL`, `VWCE`, `MSFT`, `BTC`).
+* **Live Position Metrics:** Automatically tracks net units owned, average acquisition price (PRU), total invested capital, current market valuation, and unrealized profit/loss (both in currency and percentage).
+* **Buy & Sell Trades:** Dedicated "Buy" and "Sell" buttons record order quantity, unit price, and broker commission fees.
+* **Cash Flow Option:** Choose whether each trade draws cash from your daily checking balance or operates as an independent portfolio adjustment.
 
 ---
 
 ## 💸 Cash Flow & Transactions
 
-The **Cash Flow** tab provides a bird's-eye view of your liquidity and transaction history:
+The **Cash Flow** tab provides real-time control over liquidity and transaction history:
 
 * **Net Cash Flow Card:** Real-time breakdown of total Income, total Outflow, and Net Savings.
-* **Transaction Logging:**
-  * Select the date, amount, description, and source vault.
-  * Tag transactions with categories for smart filtering.
-* **Fastfill (One-Tap Expense Logging):**
-  * In expense vaults, configure a **Fastfill Step** (e.g., `€5`, `€10`, `€25`).
-  * Tap the Fastfill button on the vault card to instantly log frequent routine purchases without typing.
+* **Transaction Logging:** Select date, amount, description, tags, category, and source vault.
+* **Fastfill (One-Tap Expense Logging):** Configure a fastfill step increment on expense vaults (e.g. `€5`, `€10`, `€25`) to log frequent routine items with a single tap.
 
+<a id="cash-flow-independence"></a>
+### Cash Flow Independence (Deduct from Income Switch)
+Every transaction form includes a **"Deduct from Income"** toggle (enabled by default):
+* When enabled, the expense reduces your liquid checking balance.
+* When disabled, the expense is recorded for budget analytics and reports without subtracting money from your liquid checking balance.
+* Perfect for company expense reimbursements, prepaid debit cards, or external budget tracking.
+
+<a id="tag-manager--custom-filtering"></a>
+### Tag Manager & Custom Filtering
+* Open the **Tag Manager** from the top bar to create custom tags with dedicated color tags.
+* Use the compact filter bar on the Cash Flow screen to instantly isolate transactions by category, vault, tag, or settlement status.
+
+---
+
+## 📅 Future Planned Transactions
+
+Plan future commitments and avoid surprises:
+* **Future Dating:** In any transaction form, pick a future date to record an upcoming planned expense or expected income (e.g. quarterly insurance, concert tickets, tax bills).
+* **Cash Flow Shielding:** Planned transactions do not alter your current liquid balance until their due date arrives.
+* **Scheduled Filter:** Toggle "Scheduled" on the Cash Flow filter bar to view upcoming commitments and future budget requirements.
+* **Settlement Day Confirmation:** When the scheduled date arrives, the app prompts you to confirm, modify, or reschedule the final settlement into your permanent history.
 
 ---
 
 ## 🔁 Recurring Transactions & Smart Alerts
 
-Automate and safeguard your routine cash flow with precision device notifications:
-
-* **Setting Up Recurring Rules:**
-  * **Title:** e.g., Apartment Rent, Gym Membership, Monthly Salary, Internet Fiber, ETF Investment.
-  * **Vault & Type:** Direct the transaction to any dedicated vault (Expenses, Income, Investments, Emergency Fund, Piggy Bank).
-  * **Day of Month:** Select the target day (1 to 31). Month-end dates automatically adjust for shorter months (e.g., February 28/29 or April 30).
-  * **Interval & Frequency:** Full calendar recurrence—schedule occurrences every $x$ Days, $x$ Weeks, $x$ Months, or $x$ Years (e.g., *Bi-weekly paychecks*, *Quarterly insurance*, *Annual property taxes*).
-  * **Notification Time:** Set the exact hour and minute for the alert.
-  * **Amount:** Pre-configured currency value.
-* **Smart Device Notifications:**
-  * At the scheduled date and time, a local push notification appears on your device.
-  * Tapping the alert opens MoneyVaults straight to the **Pending Confirmations** tab.
-* **Review & Confirm Flow:**
-  * **Confirm & Log:** Inserts the transaction directly into the destination vault, updates live balances, adjusts total net worth, and automatically advances the rule to its next scheduled date.
-  * **Skip:** Bypasses this occurrence without altering vault balances, preserving historical data while scheduling the subsequent cycle.
-* **Scheduled Rules Hub:**
-  * **Active Switch:** Toggle alerts ON or OFF anytime without losing rule parameters.
-  * **Instant Trigger (Test):** Fire an immediate test occurrence to log transactions ahead of time.
-  * **Compact vs. Expanded Views:** View rules in full detailed cards or switch to a high-density compact list view.
-  * **Editing & Deletion:** Modify rule parameters or remove outdated schedules at any time.
+Automate routine obligations:
+* **Calendar Recurrence Rules:** Set rules for rent, salaries, gym memberships, or subscriptions with customized recurrence intervals ($x$ Days, Weeks, Months, or Years), specific monthly due days (1–31), and notification times.
+* **Device Notifications:** Receive local push notifications when a payment is due.
+* **Pending Confirmations Hub:** Review due items with full control: **"Confirm & Log"**, **"Modify & Log"** (for variable utility bills), or **"Skip"** this month's cycle.
 
 ---
 
-## 📊 Portfolio Allocation & Weights
+## 💰 Dividend Tracker & Stock Vault Sync
 
-Accessible from the pie chart icon in the Vaults screen header:
+Track passive income from equity holdings:
+* **Log Dividends:** Record one-time special dividends or scheduled recurring dividends (monthly, quarterly, semi-annually, annually).
+* **Stock Vault Integration:** Select your stock vault to automatically fetch current shares owned and calculate projected gross and net payouts.
+* **Tax Withholding:** Specify tax withholding percentages (e.g. 15% or 28%) to forecast true take-home passive cash.
+* **Payout Calendar:** View upcoming dividend dates and confirm received dividends directly into your Cash Flow balance.
 
-* **Asset Distribution Breakdown:** Visual percentage weighting of each asset relative to your total net worth.
-* **Liquid vs Invested Ratios:** Understand how much of your wealth is liquid (accessible immediately in emergencies) versus compounding in long-term investments.
-* **Target Alignment:** Rebalance your contributions to hit your ideal asset allocation targets.
+---
+
+## 📊 Vaults Monthly Evolution & Trends
+
+Analyze long-term vault growth:
+* **Interactive Multi-Month Chart:** View stacked bar charts comparing performance over **3-Month** and **6-Month** horizons.
+* **Dual View Modes:**
+  * **Cumulative Balance:** Total wealth accumulated in each vault over time.
+  * **Monthly Net Flow:** Net contributions and withdrawals made within each specific month.
+* **Detailed Monthly Breakdown:** Tap any bar to inspect exact amounts and percentage weights per vault, with full native language month formatting.
+
+---
+
+## 📈 Portfolio Allocation & Weights
+
+* **Visual Asset Distribution:** Real-time percentage weighting of every vault against total net worth.
+* **Liquid vs Invested Ratios:** Monitor the balance between immediate emergency reserves and compounding growth assets.
+* **Rebalancing Insight:** Keep your portfolio aligned with your target allocations.
 
 ---
 
 ## 🧮 Financial Calculators Suite
 
-Access the suite from the **Tools** tab in the main navigation bar.
+Access the suite from the **Tools** tab:
 
 ### 1. Compound Growth & FIRE Calculator
-* **Inputs:** Initial Principal, Monthly Contributions, Expected Annual Return Rate, Investment Horizon (Years), Contribution Frequency.
-* **Auto-Fill from Vaults:** Tap *Auto-Fill* to populate numbers directly from your active Investment Vaults.
-* **FIRE Projection:** Computes your required Financial Independence number (using the 4% safe withdrawal rule) and calculates the exact countdown to retirement.
-* **Annual & Monthly Growth Tables:** Detailed year-by-year and month-by-month tables showing principal vs compound interest.
+* **Inputs:** Principal, monthly deposits, expected annual return, time horizon.
+* **FIRE Projection:** Computes your Financial Independence target number (based on the 4% safe withdrawal rule) and calculates your retirement countdown.
+* **Detailed Growth Tables:** Year-by-year and month-by-month compound growth breakdowns.
 
 ### 2. Dividend Growth & Yield Calculator
-* **Inputs:** Total Portfolio Value, Average Dividend Yield (%), Expected Annual Dividend Growth (%), Tax Rate (%), Payment Frequency.
-* **DRIP Simulation:** Toggle Dividend Reinvestment (DRIP) to see how automatically reinvesting quarterly dividends exponentially accelerates total portfolio returns.
-* **Net Income Analysis:** Clear breakdown of gross dividend payouts versus after-tax net passive income.
+* **DRIP Simulation:** Model dividend reinvestment compounding over multi-year horizons.
+* **Gross vs Net:** Calculates dividend yield on cost and after-tax annual income.
 
 ### 3. Loan Amortization & Early Payoff
-* **Inputs:** Loan Principal, Annual Interest Rate, Loan Term (Years), Extra Monthly/Yearly Payment.
-* **Transparent Schedule Columns:**
-  * **Year:** Timeline of the loan.
-  * **Principal Paid:** Regular loan principal amortized.
-  * **Extra Amort.:** Additional lump-sum or accelerated principal paid.
-  * **Interest Paid:** Total financing interest cost.
-  * **Total Paid:** Exact out-of-pocket cash paid (`Principal + Extra + Interest`).
-  * **Remaining Balance:** Outstanding balance at the end of each period.
-* **Savings Summary:** Highlights total interest saved and years shaved off the debt.
+* **Amortization Schedules:** Detailed principal, interest, and remaining balance columns.
+* **Accelerated Payoff:** Model extra monthly payments or lump sums to calculate interest savings and debt-free dates.
 
-### 4. Smart Discount Calculator *(100% Free for All Users)*
-* **Direct Discount:** Calculate final price, amount saved, and applied sales tax.
-* **Reverse Markup:** Calculate the original retail price before a markdown was applied.
-* **Parallel Comparison:** Compare two promotion deals side-by-side (e.g., *“20% off with $5 fee”* vs *“Buy 2 get 1 at 30% off”*) to pick the mathematically superior offer.
+### 4. Smart Discount Calculator
+* **Direct Discount & Sales Tax:** Instant calculation of discounted price and savings.
+* **Side-by-Side Comparison:** Compare two promotional offers side by side to pick the better deal.
+
+---
+
+## 🎓 Interactive Tutorials
+
+* 7 guided modal walkthroughs accessible from the top bar menu:
+  1. **General Account & Cash Flow**
+  2. **Investment Vaults & Allocations**
+  3. **Recurring Rules & Confirmations**
+  4. **Future Planned Transactions**
+  5. **Stocks Vault & Buy/Sell Trades**
+  6. **Dividend Tracker & Stock Vault Sync**
+  7. **Cash Flow Independence (Non-Deducted Expenses)**
+* Fully localized in 6 languages: English, Portuguese, Spanish, French, Italian, and German.
+
+---
+
+## 🔔 Smart Reminders & Notifications
+
+* **Daily Check-Ins:** Optional evening reminder to review and log daily expenses.
+* **Due Alerts:** Timely alerts for recurring subscriptions and dividend pay dates.
+* **Custom Days & Times:** Choose which days of the week and exact hour/minute alerts are triggered.
 
 ---
 
 ## ☁️ Data Center, Cloud Backup & Privacy
 
-Open the **Data Center** from the Cloud icon in the top header:
-
-* **1-Tap Backup to Cloud:** Export your full financial vault profile directly to your preferred cloud drive (**Google Drive, iCloud Drive, Nextcloud, Dropbox**, or local device storage).
-* **Encrypted JSON Portability:** Export human-readable, encrypted JSON files. You can copy the raw text to your clipboard or share it securely.
-* **Instant Restore:** Import a previously saved backup file with zero data loss.
-* **Demo Data & Clean Slate:**
-  * **Load Showcase Demo:** Fills the app with realistic sample vaults and charts to test features.
-  * **Reset to Clean Slate:** Wipes all data to start with a fresh blank canvas.
-
----
-
-## 🌐 Multi-Language & Currency Localization
-
-MoneyVaults is designed for a global audience with native multilingual support and flexible currency formatting:
-
-* **Supported Languages:**
-  * **English**
-  * **Português (International)**
-  * **Español**
-  * **Français**
-  * **Italiano**
-  * **Deutsch**
-* **Language Switching:**
-  * By default, MoneyVaults matches your device system language automatically.
-  * To select a different language manually, open the **More Options** (`⋮`) menu from the top bar on the Dashboard or Vaults screen and tap **Language** (or use the translate button in the Recurring and Start screens).
-* **Currency Selection:**
-  * Tap the currency icon or choose **Currency** in the options menu to format all cash values in EUR (`€`), USD (`$`), GBP (`£`), BRL (`R$`), JPY (`¥`), CHF (`CHF`), and more.
+* **1-Tap Cloud Backup:** Save encrypted portfolio backups directly to **Google Drive, iCloud Drive, Nextcloud, Dropbox**, or local device storage.
+* **Encrypted JSON Portability:** Export and restore your complete portfolio with zero data loss.
+* **Clean Slate & Demo Mode:** Test features with realistic sample data or reset to a clean blank slate at any time.
 
 ---
 
 ## 👑 Membership Plans (Standard vs Premium)
 
-MoneyVaults offers fair, transparent pricing with no hidden lock-ins:
+MoneyVaults offers fair, transparent pricing:
 
 | Feature | Standard Plan (Free) | MoneyVaults Premium |
 | :--- | :---: | :---: |
-| **Vault Creation** | 1 Vault per Category | **Unlimited Vaults** |
-| **Recurring Cash Flows & Alerts** | Up to 3 Active Rules | **Unlimited Active Rules** |
-| **Compact & Expanded View Modes** | Standard Expanded View | **Full Compact & Expanded Views** |
+| **Vault Creation** | Standard Vaults | **Unlimited Vaults** |
+| **Stock & Asset Vaults** | Included | **Unlimited Asset Vaults** |
+| **Dividend Tracker** | Included | **Unlimited Dividends** |
+| **Recurring Rules & Alerts** | Active Rules | **Unlimited Active Rules** |
+| **Compact & Expanded View Modes** | Expanded View | **Full Compact & Expanded Views** |
 | **Discount Calculator** | ✅ Full Access | ✅ Full Access |
 | **Financial Calculators Suite** | Read-Only Preview | **Full Interactive Access** |
 | **Portfolio Allocation & Weights** | Basic Summary | **Full Visual Analytics** |
-| **Custom Icons, Colors & Bars** | Default Themes | **Full Palette & Custom Bars** |
+| **Vaults Monthly Evolution** | Current Month | **Full Historical Horizons** |
 | **Cloud & JSON Backup** | ✅ Included | ✅ Included |
-| **Ad-Free Access** | 5 Video Passes (1m each) / 24h | **Permanent Unrestricted Access** |
-
-### Free Video Passes (Pro Pass)
-Standard users can watch an optional rewarded video ad to unlock a **1-Minute Pro Pass** to perform on-demand calculations. To maintain app health and battery efficiency, video passes are limited to **5 passes per 24-hour rolling window**. Upgrading to Premium permanently lifts all limits.
+| **Ad-Free Experience** | 5 Video Passes (1m each) / 24h | **Permanent Unrestricted Access** |
 
 ---
 
@@ -207,26 +226,19 @@ Standard users can watch an optional rewarded video ad to unlock a **1-Minute Pr
 #### How do I transfer my data to a new phone?
 1. On your old phone, open **Data Center** (cloud icon at top).
 2. Tap **Backup to Cloud** or **Copy Backup to Clipboard**.
-3. Send the file to your new phone (or save to Google Drive / iCloud).
-4. On your new phone, open MoneyVaults, open the **Data Center**, and tap **Restore from JSON**.
-
-#### How do I restore my Premium purchase?
-1. Go to the **Plan** tab (or open the Premium paywall).
-2. Tap **Restore Purchases** at the top or bottom of the screen.
-3. Your Google Play subscription / lifetime license will be verified and reactivated instantly.
+3. On your new phone, open MoneyVaults, open the **Data Center**, and tap **Restore from JSON**.
 
 #### Does MoneyVaults connect to my bank account?
-**No.** MoneyVaults is intentionally an offline-first app. It never asks for banking credentials or online access tokens. You retain 100% control over all logged data.
+**No.** MoneyVaults is strictly offline-first. It never asks for banking credentials or online access tokens. You retain 100% control over all logged data.
 
 ---
 
 ## 📬 Support & Contact
 
-* **Documentation & Privacy Policy:** [MoneyVaults Privacy & Legal Center](https://compoundlysupport.github.io/MoneyVaults-Privacy/)
-* **Support Email:** `support@compoundly.com`
+* **Privacy & Legal Center:** [MoneyVaults Privacy Notice](https://compoundlysupport.github.io/MoneyVaults-Privacy/)
+* **Support Email:** `compoundlysupport@gmail.com`
 * **GitHub Repository:** [compoundlysupport/MoneyVaults-Privacy](https://github.com/compoundlysupport/MoneyVaults-Privacy)
 
 ---
 
 *MoneyVaults: Smart Vaults • Compound Growth • Financial Freedom*
-

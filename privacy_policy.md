@@ -1,38 +1,42 @@
 # Legal & Privacy Center — MoneyVaults: Finances & FIRE
 
-**Effective Date & Last Updated:** October 9, 2026  
+**Effective Date & Last Updated:** October 14, 2026  
 
 ---
 
 ## 🛡️ Part I: Privacy Policy
 
 ### Core Privacy Commitment
-**MoneyVaults: Finances & FIRE** is built on an offline-first architecture. Your personal financial transactions, account balances, and savings vault data are stored locally on your device. We do not require account registration, and we do not store or transmit your financial logs to our servers.
+**MoneyVaults: Finances & FIRE** is engineered from the ground up on a strict **offline-first architecture**. Your financial transactions, portfolio balances, stock positions, dividend records, and savings vaults are processed and stored exclusively on your device. We do not require account registration, and we do not store, track, or transmit your personal financial logs to external servers.
 
 ### 1. Information We Do NOT Collect
-Because MoneyVaults operates primarily offline on your device, we do **not** collect or store on our servers:
-* Personal identifiers such as your real name, physical address, or phone number.
-* Bank credentials, bank account numbers, credit card details, or banking logins.
-* Your specific budget entries, savings goals, transactions, or investment portfolio amounts.
+Because MoneyVaults operates offline on your device, we do **not** collect or store on developer servers:
+* Personal identifiers such as your legal name, physical address, email address, or phone number.
+* Bank credentials, bank account numbers, debit/credit card details, or Open Banking tokens.
+* Your specific transaction entries, asset purchases, dividend payouts, net worth, or budget goals.
 
 ### 2. Information Processed Locally on Your Device
-The following data remains strictly inside your local device storage:
-* **Vaults & Transactions:** Bucket names, amounts, categories, dates, and simulated return rates.
-* **Recurring Rules & Alerts:** Locally scheduled recurring cash flows and device push notifications.
-* **User Preferences:** Selected currency symbol (e.g., €, $, £, R$), language settings, reminder notification schedules, and display settings.
+The following data remains strictly inside your device's private local storage:
+* **Vaults & Portfolio Assets:** Vault names, target goals, categories, and dedicated stock/asset portfolios (ticker symbols, units owned, average acquisition cost PRU, market prices, and buy/sell trade logs).
+* **Cash Flow & Planned Commitments:** Everyday income/expenses, future planned transactions with scheduled due dates, and non-deducted budget items ("Deduct from Income" toggle).
+* **Dividend Tracker:** Dividend records (gross amounts, net payouts, tax withholding percentages, payment frequencies, and linked stock vaults).
+* **Recurring Rules & Alerts:** Locally scheduled recurring cash flows and device push notification schedules.
+* **Tags & Categories:** Custom user-defined tags, color labels, and category allocation settings.
+* **User Preferences:** Selected currency symbol (e.g., €, $, £, R$), language settings, reminder notification schedules, and view mode preferences (compact vs expanded).
 * **Temporary Pro Passes:** Local timestamp tracking expiration of ad-rewarded Pro Passes (1 minute each, limited to 5 passes per 24-hour window).
-* **Backups:** Manual JSON backup files generated solely when you choose to export your data.
+* **Backups:** Private JSON backup files generated solely when you explicitly choose to export your data.
 
 ### 3. Third-Party Services & Technical Data
-* **In-App Purchases (RevenueCat & Google Play Billing):** Processes anonymous app user IDs, transaction receipts, active subscription status, and purchase dates to unlock and restore Premium features.
-* **Rewarded Video Ads (Google AdMob):** When you voluntarily watch a video ad to unlock a 1-minute Pro Pass (up to 5 per 24-hour window), Google AdMob processes advertising identifiers (GAID), device diagnostics, and ad interaction data to prevent fraud.
+The App integrates trusted industry-standard SDKs solely for optional subscriptions and ad-rewarded passes:
+* **In-App Purchases (RevenueCat & Google Play Billing):** Processes anonymous app user IDs, transaction receipts, active subscription status, and purchase dates to unlock and restore Premium features. See [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy).
+* **Rewarded Video Ads (Google AdMob):** When you voluntarily watch a video ad to unlock a 1-minute Pro Pass (up to 5 per 24-hour window), Google AdMob processes advertising identifiers (GAID), device diagnostics, and ad interaction data to prevent fraud. See [Google Privacy Policy](https://policies.google.com/privacy).
 
 ### 4. Device Permissions
-* **POST_NOTIFICATIONS:** Used only for optional, locally scheduled expense check-ins, weekly wealth reviews, and recurring transaction due alerts.
-* **INTERNET:** Required only for Google Play Billing validation and AdMob video playback.
+* **POST_NOTIFICATIONS:** Used only for optional, locally scheduled daily check-ins, recurring transaction due alerts, and dividend payout reminders.
+* **INTERNET:** Required only for Google Play Billing validation and optional AdMob rewarded video playback.
 
-### 5. Data Deletion
-You can clear all financial data at any time through the App's Data Center or by clearing the App's storage in your device settings.
+### 5. Data Deletion & Portability
+You retain complete ownership: you can export your data to encrypted JSON or wipe all stored financial data at any time via the App's **Data Center** or by clearing the App's storage in your device settings.
 
 ---
 
@@ -42,10 +46,11 @@ You can clear all financial data at any time through the App's Data Center or by
 MoneyVaults: Finances & FIRE is provided strictly on an **"AS IS"** and **"AS AVAILABLE"** basis, without warranties of any kind, whether express, implied, statutory, or otherwise. To the maximum extent permitted by applicable law, the developer disclaims all warranties, including but not limited to merchantability, fitness for a particular purpose, non-infringement, or uninterrupted, bug-free operation.
 
 ### 2. No Financial, Investment, or Legal Advice
-The calculations, compound interest models, loan amortization schedules, and FIRE (Financial Independence, Retire Early) projections generated by MoneyVaults are for **educational and informational simulation purposes only**.
-* The App does not guarantee future financial returns or investment outcomes.
-* Past performance or mathematical models do not guarantee future wealth.
-* You are solely responsible for verifying any figures before making financial commitments. Consult a qualified professional for certified financial advice.
+The calculations, compound interest models, loan amortization schedules, stock portfolio trackers, dividend forecasts, and FIRE (Financial Independence, Retire Early) projections generated by MoneyVaults are for **educational and informational simulation purposes only**.
+* MoneyVaults is a self-directed tracking and simulation tool. It is not a broker-dealer, bank, or registered investment advisor.
+* The App does not execute real-world securities trades or connect directly to financial exchanges. Stock market prices and dividends are entered and managed by the user.
+* Past mathematical performance or simulation curves do not guarantee future wealth.
+* You are solely responsible for verifying any figures before making financial commitments. Consult a certified financial planner, accountant, or attorney for professional advice.
 
 ### 3. Customer Support on a Best-Effort Basis (Boa Fé)
 Customer support is provided on a **reasonable, voluntary best-effort basis ("boa fé")**. 
@@ -64,4 +69,5 @@ To the fullest extent permitted by applicable law, in no event shall the develop
 
 ## 📬 Part III: Support & Contact
 If you have questions regarding this Privacy Policy, your subscription, or the Terms of Service, please contact:  
-**Support Email:** compoundlysupport@gmail.com
+* **Support Email:** compoundlysupport@gmail.com  
+* **GitHub Legal & Privacy Repository:** [https://github.com/compoundlysupport/MoneyVaults-Privacy](https://github.com/compoundlysupport/MoneyVaults-Privacy)
