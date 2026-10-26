@@ -157,7 +157,7 @@
   <div class="container">
     <div class="badge">Legal & Privacy Center</div>
     <h1>MoneyVaults: Finances & FIRE</h1>
-    <div class="last-updated">Effective Date & Last Updated: October 14, 2026</div>
+    <div class="last-updated">Effective Date & Last Updated: October 26, 2026</div>
 
     <div class="nav-bar">
       <a href="#privacy" class="nav-btn active">1. Privacy Policy</a>
@@ -171,7 +171,7 @@
       <h2>🛡️ Part I: Privacy Policy</h2>
 
       <div class="highlight-box">
-        <strong>Offline-First Privacy Architecture:</strong> MoneyVaults: Finances & FIRE stores your financial records, smart vaults, stock positions, dividend entries, and transaction logs locally on your device. We do not require account registration, and we do not transmit your personal financial logs to developer servers.
+        <strong>Offline-First Privacy Architecture:</strong> MoneyVaults: Finances & FIRE stores your financial records, smart vaults, evolution & trend snapshots, stock positions, dividend entries, and transaction logs locally on your device. We do not require account registration, and we do not transmit your personal financial logs to developer servers.
       </div>
 
       <h3>1. Information We Do NOT Collect</h3>
@@ -186,13 +186,14 @@
       <p>The following data remains strictly inside your local device storage:</p>
       <ul>
         <li><strong>Smart Vaults & Asset Portfolios:</strong> Vault names, target amounts, categories, and dedicated stock/equity portfolios (ticker symbols, units owned, average acquisition cost PRU, market prices, and buy/sell trade logs).</li>
-        <li><strong>Cash Flow & Planned Commitments:</strong> Everyday transactions, planned future expenses with due dates, and non-deducted budget records ("Deduct from Income" toggle).</li>
-        <li><strong>Dividend Tracker:</strong> Payout amounts, tax withholding rates, payment frequency, and stock vault linkages.</li>
-        <li><strong>Recurring Rules & Alerts:</strong> Scheduled recurring rules, monthly due days, and local device push notifications.</li>
+        <li><strong>Evolution & Trend Curve Snapshots:</strong> Locally computed 00:00 daily, weekly, and monthly vault snapshots (for 1M, 3M, YTD, 1Y, and All-Time trend curves) with automatic First-In-First-Out (FIFO) local retention pruning.</li>
+        <li><strong>Cash Flow, Calendar & Planned Commitments:</strong> Everyday transactions, interactive monthly calendar items, planned one-time future transactions with scheduled due dates, and cash flow inclusion settings ("Include in the cash flow" toggle).</li>
+        <li><strong>Dividend Tracker & Projections:</strong> Payout amounts, tax withholding rates, payment frequency, linked stock vaults, multi-horizon forecasts (1M, 3M, 6M, End of Year, 1Y), and monthly average reference indicators.</li>
+        <li><strong>Recurring Rules & Alerts:</strong> Scheduled recurring rules, monthly due days, Day 10 trial end cancellation reminders, and local device push notification schedules.</li>
         <li><strong>Tags & Categories:</strong> User-defined custom tags, color palettes, and category mappings.</li>
-        <li><strong>User Preferences:</strong> Base currency formatting, multilingual settings, and view modes (compact vs expanded).</li>
+        <li><strong>User Preferences:</strong> Base currency formatting, multilingual settings, vault sorting order, and view modes (compact vs expanded, list vs calendar).</li>
         <li><strong>Temporary Pro Passes:</strong> Local timestamp tracking expiration of ad-rewarded Pro Passes (1 minute each, up to 5 per 24-hour window).</li>
-        <li><strong>Backups:</strong> Manual JSON backup files generated solely when you choose to export your data.</li>
+        <li><strong>Backups:</strong> Manual JSON backup files (including vaults, transactions, recurring rules, dividends, and trend snapshots) generated solely when you choose to export your data.</li>
       </ul>
 
       <h3>3. Third-Party Services & Technical Data</h3>
@@ -210,7 +211,7 @@
 
       <h3>4. Device Permissions</h3>
       <ul>
-        <li><strong>POST_NOTIFICATIONS:</strong> Used only for optional, locally scheduled expense check-ins, weekly wealth reviews, recurring transaction due alerts, and dividend reminders.</li>
+        <li><strong>POST_NOTIFICATIONS:</strong> Used only for optional, locally scheduled expense check-ins, weekly wealth reviews, recurring transaction due alerts, planned transaction reminders, dividend reminders, and the automated Day 10 trial end reminder notification.</li>
         <li><strong>INTERNET:</strong> Required only for Google Play Billing validation and AdMob video playback.</li>
       </ul>
 
@@ -235,10 +236,11 @@
 
       <h3>2. No Financial, Investment, or Legal Advice</h3>
       <p>
-        The calculations, compound interest models, stock tracking analytics, dividend forecasts, loan amortization schedules, and FIRE (Financial Independence, Retire Early) projections generated by MoneyVaults are for <strong>educational and informational simulation purposes only</strong>.
+        The calculations, compound interest models, evolution & trend curves, stock tracking analytics, dividend forecasts, loan amortization schedules, and FIRE (Financial Independence, Retire Early) projections generated by MoneyVaults are for <strong>educational and informational simulation purposes only</strong>.
       </p>
       <ul>
-        <li>The App is not a broker-dealer or financial advisor. Stock market prices, units, and dividends are user-entered and managed for tracking purposes.</li>
+        <li>The App is not a broker-dealer or financial advisor. Stock market prices, units, P&L updates, and dividends are user-entered and managed for personal tracking purposes.</li>
+        <li>Built-in Demo Mode sample data uses fictional company names and ticker symbols (such as NovaTech Corp. NVTX, Apex Systems APXS, Prime Realty Trust PRMT, and OmniBev Corp. OMBV) strictly for illustrative demonstration.</li>
         <li>The App does not guarantee future financial returns or investment outcomes.</li>
         <li>Past mathematical performance or simulation curves do not guarantee future wealth.</li>
         <li>You are solely responsible for verifying any figures before making financial commitments. Consult a qualified professional for certified financial advice.</li>
@@ -253,16 +255,25 @@
         <li>We strive to assist users promptly with technical and billing inquiries in good faith.</li>
       </ul>
 
-      <h3>4. In-App Purchases, Subscriptions & Refunds</h3>
+      <h3>4. In-App Purchases, Subscriptions & 14-Day Free Trial</h3>
       <ul>
         <li>
-          <strong>Billing:</strong> Payments for MoneyVaults Premium are billed through Google Play In-App Billing in accordance with Google Play's terms.
+          <strong>14-Day Free Trial:</strong> All auto-renewing subscription options (Monthly, 3-Month, 6-Month, Annual) include an upfront 14-day risk-free trial. You will not be charged if you cancel before the 14-day trial concludes.
         </li>
         <li>
-          <strong>Cancellation:</strong> Subscriptions automatically renew unless cancelled by you in your Google Play Store Account Settings prior to the renewal date.
+          <strong>Trial Reminders:</strong> The App automatically schedules a private local device notification on Day 10 (4 days before renewal) to alert you that your trial is nearing its end.
         </li>
         <li>
-          <strong>Refunds:</strong> Refund requests are governed by Google Play's standard refund policies. Within 48 hours of purchase, refunds can generally be requested directly through Google Play.
+          <strong>Pricing Options:</strong> MoneyVaults Premium offers 5 tiers: Monthly (&euro;5.00/mo), 3 Months (&euro;12.50/quarter), 6 Months (&euro;20.00/half-year), Annual (&euro;35.00/year), and Lifetime Access (&euro;60.00 one-time purchase with permanent access). Prices may vary by regional currency and local taxes.
+        </li>
+        <li>
+          <strong>Rewarded Video Passes:</strong> Users may also unlock temporary 1-minute full Premium passes by voluntarily watching short video ads (up to 5 passes per 24 hours) with zero financial charge.
+        </li>
+        <li>
+          <strong>Billing & Renewal:</strong> Payments are processed securely via Google Play In-App Billing. Subscriptions renew automatically unless cancelled in your Google Play Store Account Settings prior to the renewal date.
+        </li>
+        <li>
+          <strong>Cancellation & Refunds:</strong> You can cancel your subscription at any time via Google Play > Payments & Subscriptions > Subscriptions. Refunds are governed strictly by Google Play's standard refund policies.
         </li>
       </ul>
 
@@ -280,6 +291,9 @@
       </p>
       <p>
         <strong>Email Support:</strong> <a href="mailto:compoundlysupport@gmail.com">compoundlysupport@gmail.com</a>
+      </p>
+      <p>
+        <strong>Official Documentation & Repository:</strong> <a href="https://github.com/compoundlysupport/MoneyVaults-Privacy" target="_blank" rel="noopener">github.com/compoundlysupport/MoneyVaults-Privacy</a>
       </p>
       <p style="color: var(--text-muted); font-size: 13px;">
         We aim to respond to genuine inquiries within standard developer response windows (typically 1–3 business days).

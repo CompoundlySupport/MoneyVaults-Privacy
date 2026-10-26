@@ -124,9 +124,9 @@
 </head>
 <body>
   <div class="container">
-    <div class="badge">Official Documentation</div>
+    <div class="badge">Official Documentation • Updated October 16, 2026</div>
     <h1>MoneyVaults: Finances & FIRE — User Manual</h1>
-    <div class="subtitle">Complete reference guide for personal wealth tracking, compound simulations, stock vaults, and dividends.</div>
+    <div class="subtitle">Complete reference guide for personal wealth tracking, Evolution & Trend Curves, interactive Calendar View, compound simulations, stock vaults, and dividends.</div>
 
     <div class="nav-bar">
       <a class="nav-link" href="index.html">← Legal & Privacy Center</a>
@@ -136,62 +136,97 @@
     <h2>🏛️ 1. Philosophy & Architecture</h2>
     <p>MoneyVaults is built upon an <strong>offline-first architecture</strong>. Your data is your property: no cloud servers require your financial records, no third-party tracking scripts log your income, and no bank credentials are ever requested.</p>
 
-    <h2>🗄️ 2. Vault Management & Stock Portfolios</h2>
+    <h2>🗄️ 2. Vault Management, Sorting & Stock Portfolios</h2>
     <div class="card">
       <p><strong>Vault Categories:</strong></p>
       <ul>
         <li><strong>Piggy Bank:</strong> Goals with target amounts and milestone progress bars.</li>
         <li><strong>Emergency Fund:</strong> Calculates monthly burn rate and runway months covered.</li>
         <li><strong>Investment:</strong> Simulates compound growth, dividend projections, and capital goals.</li>
-        <li><strong>Stock / Equity:</strong> Track ticker symbols, units, average cost (PRU), live P&L, and dedicated Buy & Sell orders.</li>
+        <li><strong>Stock / Equity:</strong> Track ticker symbols, units, average acquisition cost (PRU), live P&L, and dedicated Buy & Sell orders.</li>
         <li><strong>Expense:</strong> Fastfill-enabled accounts for seamless one-tap daily spending.</li>
       </ul>
-      <p><strong>Independent Cash Flow ("Deduct from Income" Switch):</strong> Log expenses for budget tracking without subtracting from liquid cash balances (ideal for reimbursed expenses or prepaid budgets).</p>
+      <p><strong>Vault Sorting & Quick Updates:</strong> Sort vaults by Default order, Balance, Name, or Vault Type. Tap <strong>Update P&L</strong>, <strong>Update Price</strong>, or <strong>Update Base</strong> to open an instant auto-selected numeric input dialog where typing immediately replaces the old figure.</p>
+      <p><strong>Cash Flow Control ("Include in the cash flow" Switch):</strong> Every expense, vault contribution, withdrawal, stock trade, planned item, and recurring rule features a unified <strong>"Include in the cash flow"</strong> switch. Turn it off when logging reimbursed expenses, prepaid card spending, or internal portfolio transfers that shouldn't affect your liquid cash balance.</p>
       <p><strong>Tag Manager:</strong> Create and color-code custom tags to classify transactions and filter views effortlessly.</p>
     </div>
 
-    <h2>💰 3. Dividend Tracker & Stock Sync</h2>
+    <h2>📈 3. Evolution & Trend Curves (Vaults & Portfolio)</h2>
     <div class="card">
-      <p>Track passive income from equity holdings:</p>
+      <p>Analyze historical and real-time wealth progression through the <strong>Vaults Evolution & Trends</strong> screen:</p>
       <ul>
-        <li><strong>Distributions:</strong> Log one-time or recurring (monthly, quarterly, annual) dividends.</li>
+        <li><strong>Multi-Horizon Evolution Curves:</strong> Inspect individual vaults or your entire portfolio across <strong>1M</strong> (Daily), <strong>3M</strong> (Daily), <strong>YTD</strong> (Weekly), <strong>1Y</strong> (Weekly), and <strong>ALL</strong> (Monthly) horizons.</li>
+        <li><strong>Natural Dual-Curve Scale (Balance & P&L):</strong> Simultaneously compare <strong>Current Balance</strong> and <strong>Profit & Loss (P&L)</strong> on a natural monetary scale with a dashed <code>0</code> baseline and Y-axis reference labels, plus interactive touch-scrubbing tooltips.</li>
+        <li><strong>Automated 00:00 Snapshots & FIFO Pruning:</strong> At <code>00:00</code> local time, MoneyVaults captures daily, weekly, and monthly snapshots using First-In-First-Out (FIFO) retention pruning to keep storage ultra-compact. Periods prior to a vault's creation date automatically render at <code>0</code>.</li>
+        <li><strong>Monthly Stacked Bar Evolution:</strong> Compare multi-month cumulative balances and monthly net cash flows across 3-month and 6-month windows with native localized month names.</li>
+      </ul>
+    </div>
+
+    <h2>📅 4. Interactive Monthly Calendar View & Cash Flow Filtering</h2>
+    <div class="card">
+      <p>Switch seamlessly between the <strong>Transaction List View</strong> and the <strong>Interactive Monthly Calendar View</strong> on the Cash Flow screen:</p>
+      <ul>
+        <li><strong>Monthly Grid & Daily Summaries:</strong> Visualize daily inflows, outflows, and net totals at a glance.</li>
+        <li><strong>Status Filter Pills:</strong> Filter the calendar by <strong>All</strong>, <strong>Completed</strong>, <strong>Planned</strong>, or <strong>Recurring</strong> items.</li>
+        <li><strong>Direct Day Actions & Future Editing:</strong> Tap any date to inspect its transactions, confirm due items in 1 tap, modify a future one-time planned transaction, or edit a future recurring rule (affecting only the selected and subsequent future occurrences without creating premature completed entries).</li>
+        <li><strong>Advanced Filter Bar:</strong> Combine the <strong>Exclude in Cash Flow Filter</strong> (leftmost toggle to hide transactions with "Exclude in Cash Flow" active), <strong>Title Search</strong>, <strong>Vault Filter</strong>, <strong>Tag Filter</strong>, <strong>Category Filter</strong>, and <strong>Time Range Filter</strong> (This Month, Last Month, Last 3M, Last 6M, YTD, Last Year, or Custom Date Range).</li>
+      </ul>
+    </div>
+
+    <h2>💰 5. Dividend Tracker, Projections & Stock Sync</h2>
+    <div class="card">
+      <p>Track and project passive income from equity holdings:</p>
+      <ul>
+        <li><strong>Distributions:</strong> Log one-time or recurring (monthly, quarterly, semi-annual, annual) dividends.</li>
         <li><strong>Stock Link:</strong> Connect dividends to stock vaults to estimate payouts based on shares owned.</li>
         <li><strong>Tax Withholding:</strong> Configure withholding rates to project realistic net take-home cash.</li>
+        <li><strong>Dividend Projections Dashboard:</strong> Switch between <strong>1M</strong>, <strong>3M</strong>, <strong>6M</strong>, <strong>End of Year</strong>, and <strong>1Y</strong> projection horizons.</li>
+        <li><strong>Monthly Average Reference Line:</strong> Continuous edge-to-edge dashed reference line with a floating pill badge highlighting your average monthly dividend income.</li>
+        <li><strong>Batch Management:</strong> Expand cards for localized unit breakdowns and use Select All, Deselect All, and Delete Selected for efficient management.</li>
         <li><strong>Payout Confirmations:</strong> Confirm dividends upon payment directly into Cash Flow.</li>
       </ul>
     </div>
 
-    <h2>📅 4. Future Planned Transactions</h2>
-    <p>Schedule future commitments with target dates. Planned items do not affect your current liquid balance until their due date, when the app prompts you to confirm or settle.</p>
+    <h2>🗓️ 6. Future Planned Transactions</h2>
+    <p>Schedule future commitments with target dates. Planned items do not affect your current liquid balance until their due date, when the app prompts you to confirm, edit, or settle them. You can also modify any future planned transaction directly from the Calendar View.</p>
 
-    <h2>📊 5. Vaults Monthly Evolution</h2>
-    <p>Visualize portfolio growth with interactive multi-month stacked bar charts across 3-month and 6-month horizons, switching between Cumulative Balance and Monthly Net Flow with native localized month names.</p>
-
-    <h2>🧮 6. Financial Calculators Suite</h2>
+    <h2>🧮 7. Financial Calculators Suite</h2>
     <ul>
-      <li><strong>Compound Growth & FIRE:</strong> Project wealth over horizons up to 50 years, compute your FIRE retirement number, and analyze compound interest vs deposits.</li>
+      <li><strong>Compound Growth & FIRE:</strong> Maximized full-width trajectory charts over horizons up to 50 years, computing your FIRE retirement number, compound reinvestment advantage legend, and deposits vs interest breakdown.</li>
       <li><strong>Dividend Growth & Yield:</strong> DRIP reinvestment modeling, gross/net yield, and taxation analysis.</li>
-      <li><strong>Loan Amortization:</strong> Transparent schedule separating regular principal, extra amortizations, interest, and remaining balance.</li>
+      <li><strong>Loan Amortization:</strong> Maximized remaining principal balance trajectory chart and transparent schedule separating regular principal, extra amortizations, interest saved, and time ahead of schedule.</li>
       <li><strong>Discount Calculator (100% Free):</strong> Single and parallel discount comparisons with sales tax.</li>
     </ul>
 
-    <h2>🔁 7. Recurring Transactions & Smart Device Alerts</h2>
+    <h2>🔁 8. Recurring Transactions & Smart Device Alerts</h2>
     <div class="card">
       <p>Automate routine expenses, income, subscriptions, and investments:</p>
       <ul>
         <li><strong>Flexible Schedules:</strong> Every <i>x</i> Days, Weeks, Months, or Years with custom due dates (1–31) and exact notification times.</li>
         <li><strong>Device Alerts:</strong> Local push notifications with 1-tap <strong>Confirm & Log</strong>, <strong>Modify & Log</strong>, or <strong>Skip</strong>.</li>
+        <li><strong>Day 10 Trial End Alert:</strong> Automated local notification scheduled 4 days before your 14-day free trial concludes (on Day 10) to review your membership.</li>
       </ul>
     </div>
 
-    <h2>🎓 8. Interactive Step-by-Step Tutorials</h2>
-    <p>7 guided walkthrough modal dialogs covering General Account, Investment Vaults, Recurring Rules, Planned Transactions, Stocks Vault, Dividend Tracker, and Cash Flow Independence across 6 languages.</p>
+    <h2>🎓 9. Interactive Step-by-Step Tutorials & Demo Mode</h2>
+    <p>Explore 7 guided walkthrough modal dialogs covering General Account, Investment Vaults, Recurring Rules, Planned Transactions, Stocks Vault, Dividend Tracker, and Cash Flow Independence across 6 languages. You can also activate the built-in <strong>Demo Mode</strong> (populated strictly with fictional sample tickers such as <code>NVTX</code>, <code>APXS</code>, <code>PRMT</code>, and <code>OMBV</code>) to explore realistic daily, weekly, and monthly portfolio fluctuations before resetting to a clean slate.</p>
 
-    <h2>🌐 9. Multi-Language & Universal Currency</h2>
+    <h2>🌐 10. Multi-Language & Universal Currency</h2>
     <p>MoneyVaults natively supports 6 languages (English, Portuguese, Spanish, French, Italian, German) and universal world currencies (&euro;, $, &pound;, R$, &yen;, CHF, etc.) with automatic system matching and on-demand switching.</p>
 
-    <h2>☁️ 10. Data Center & Cloud Backup</h2>
-    <p>You can create 1-tap backups to Google Drive, iCloud, or local storage anytime through the <strong>Data Center</strong>. Data is exported as clean, encrypted JSON files that can be restored on any device without loss.</p>
+    <h2>☁️ 11. Data Center & Cloud Backup</h2>
+    <p>Create 1-tap backups to Google Drive, iCloud, or local storage anytime through the <strong>Data Center</strong>. Data—including vaults, transactions, historical evolution snapshots, recurring rules, and custom tags—is exported as clean JSON files that can be restored on any device without loss.</p>
+
+    <h2>👑 12. Membership Plans & 14-Day Free Trial</h2>
+    <div class="card">
+      <p>MoneyVaults offers transparent, flexible pricing:</p>
+      <ul>
+        <li><strong>14-Day Free Trial:</strong> All subscription plans (Monthly &euro;5.00, 3-Month &euro;12.50, 6-Month &euro;20.00, Annual &euro;35.00) start with a 14-day risk-free trial. Cancel anytime before Day 14 via Google Play Subscriptions with zero charges.</li>
+        <li><strong>Lifetime Access:</strong> &euro;60.00 one-time purchase with permanent unlimited access.</li>
+        <li><strong>Day 10 Local Reminder:</strong> Receive an automatic reminder 4 days before renewal.</li>
+        <li><strong>Rewarded Video Passes:</strong> Tap &ldquo;Watch Video for 1m Premium Pass&rdquo; directly below the trial action button to unlock 1-minute full Premium access (up to 5 passes per 24 hours).</li>
+      </ul>
+    </div>
 
     <div class="footer">
       <p>© 2026 MoneyVaults. All rights reserved. • Support: compoundlysupport@gmail.com</p>
