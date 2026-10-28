@@ -89,17 +89,24 @@ The flow of funds between the external world, your General Account, and your spe
 
 ```mermaid
 flowchart TD
-    ExternalIncome["💰 External Income<br/>(Salary, Freelance, Business)"] -->|Inflow (+)| GA["💳 General Account<br/>(Operational Living Budget)"]
-    GA -->|Outflow (-)| LivingExpenses["🛒 Living Expenses<br/>(Rent, Groceries, Dining, Bills)"]
+    ExternalIncome["💰 External Income: Salary, Freelance, Business"]
+    GA["💳 General Account: Operational Living Budget"]
+    LivingExpenses["🛒 Living Expenses: Rent, Groceries, Dining, Bills"]
+    Reserves["🛡️ Savings & Reserves: Emergency Fund, Piggy Banks"]
+    Assets["📈 Asset & Equity Vaults: Stocks, ETFs, Crypto"]
+    Dividends["💵 Dividend Payouts: Received & Projected"]
 
-    GA -->|Capital Allocation (Outflow)| Reserves["🛡️ Savings & Reserves<br/>(Emergency Fund, Piggy Banks)"]
-    Reserves -->|Capital Drawdown (Inflow)| GA
+    ExternalIncome -->|Inflow| GA
+    GA -->|Outflow| LivingExpenses
 
-    GA -->|Buy Trades: deductFromIncome| Assets["📈 Asset & Equity Vaults<br/>(Stocks, ETFs, Crypto, Real Estate)"]
-    Assets -->|Sell Proceeds: deductFromIncome| GA
+    GA -->|Capital Allocation| Reserves
+    Reserves -->|Capital Drawdown| GA
 
-    Dividends["💵 Dividend Payouts<br/>(Received & Projected)"] -->|Vault Inflow (+)| Assets
-    Dividends -.->|Optional Cash Flow (+)| GA
+    GA -->|Buy Trades| Assets
+    Assets -->|Sell Proceeds| GA
+
+    Dividends -->|Vault Inflow| Assets
+    Dividends -.->|Optional Cash Flow| GA
 
     style GA fill:#0f172a,stroke:#0d9488,stroke-width:3px,color:#f8fafc
     style ExternalIncome fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#f8fafc
