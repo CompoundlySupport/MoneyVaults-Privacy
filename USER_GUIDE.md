@@ -26,8 +26,7 @@ Welcome to **MoneyVaults: Finances & FIRE**, the modern, offline-first personal 
 6. [Cash Flow, Calendar View & Transactions](#-cash-flow-calendar-view--transactions)
    - [Interactive Monthly Calendar View](#interactive-monthly-calendar-view)
    - [Fastfill One-Tap Logging](#fastfill-one-tap-logging)
-   - [Cash Flow Independence ("Include in the cash flow" Switch & Filter)](#cash-flow-independence)
-   - [Tag Manager & Multi-Criteria Filtering](#tag-manager--custom-filtering)
+   - [Multi-Criteria Filtering & Tag Manager](#multi-criteria-filtering--tag-manager)
 7. [Future Planned Transactions](#-future-planned-transactions)
 8. [Recurring Transactions & Smart Alerts](#-recurring-transactions--smart-alerts)
 9. [Dividend Tracker, Projections & Multi-Vault Sync](#-dividend-tracker--stock-vault-sync)
@@ -129,13 +128,12 @@ Every event in MoneyVaults updates the corresponding vaults with strict mathemat
 | :--- | :--- | :--- | :--- | :--- |
 | **Income** *(Salary, Freelance, Business)* | **+ Inflow** (Direct Income) | *None* | Increases Monthly Surplus | General Account: Inflow |
 | **Expenses** *(Groceries, Dining, Utilities)* | **- Outflow** (Direct Expense) | *None* | Decreases Monthly Surplus | General Account: Outflow |
-| **Transfer to Vault** *(Piggy, Emergency, Investment)* | **- Outflow** (Capital Allocation) | **+ Inflow** (Capital Received) | Decreases General Cash | Destination Vault: Inflow |
+| **Transfer to Vault** *(Emergency, Piggy, Investments)* | **- Outflow** (Capital Allocation) | **+ Inflow** (Capital Received) | Decreases General Cash | Destination Vault: Inflow |
 | **Withdrawal from Vault** *(e.g. from Emergency Fund)* | **+ Inflow** (Capital Drawdown) | **- Outflow** (Capital Withdrawn) | Increases General Cash | Origin Vault: Outflow |
-| **Stocks / Asset: Buy** *(`Deduct from Income: ON`)* | **- Outflow** (Capital Transfer) | **+ Inflow** (Units & PRU Basis) | Decreases General Cash | Asset Vault: Inflow |
-| **Stocks / Asset: Sell** *(`Deduct from Income: ON`)* | **+ Inflow** (Liquidation Proceeds) | **- Outflow** (Units Disposed) | Increases General Cash | Asset Vault: Outflow |
-| **Stocks / Asset: Buy** *(`Deduct from Income: OFF`)* | *No Impact* (Pre-existing capital) | **+ Inflow** (Units & PRU Basis) | *Neutral* | Asset Vault: Inflow |
-| **Dividends: Received** *(Confirmed into Vault)* | *No Impact* (unless Cash Flow enabled) | **+ Inflow** (Dividend Yield Earned) | *Neutral* (unless Cash Flow) | Asset Vault: Inflow |
-| **Dividends: Projected** *(Upcoming Schedule)* | *No Impact* | **Future Inflow Forecast** | Positive Future Inflow | Budget: Upcoming Inflow |
+| **Stocks / Asset: Buy** *(Buy Shares / Units)* | **- Outflow** (Capital Allocation) | **+ Inflow** (Units & PRU Basis) | Decreases General Cash | Asset Vault: Inflow |
+| **Stocks / Asset: Sell** *(Sell Shares / Units)* | **+ Inflow** (Liquidation Proceeds) | **- Outflow** (Units Disposed) | Increases General Cash | Asset Vault: Outflow |
+| **Dividends: Received** *(Confirmed into Chosen Vault)* | **+ Inflow** *(if General Account)* | **+ Inflow** *(if Target Vault)* | Real Inflow in Chosen Vault | Chosen Vault: Inflow |
+| **Dividends: Projected** *(Upcoming Schedule)* | *Future Inflow Forecast* | *Future Inflow Forecast* | Positive Future Inflow | Budget: Upcoming Inflow |
 
 <a id="the-budget-surplus--deficit-equation"></a>
 ### 5. The Budget Surplus / Deficit Equation
@@ -182,7 +180,7 @@ MoneyVaults organizes your wealth into dedicated, purpose-built vaults:
 * **Ticker Symbol:** Assign market tickers (e.g., `VWCE`, `IWDA`, or fictional demo tickers like `NVTX`, `APXS`).
 * **Live Position Metrics:** Automatically tracks net units owned, average acquisition price (PRU), total invested capital, current market valuation, and unrealized profit/loss (both in currency and percentage).
 * **Buy & Sell Trades:** Dedicated "Buy" and "Sell" buttons record order quantity, unit price, and broker commission fees.
-* **Cash Flow Option:** Choose whether each trade is included in your Cash Flow balance or operates as an independent portfolio adjustment.
+* **Cash Flow Integration:** Buy trades allocate investment capital from your General Account to build your position, while sell trades liquidate units and return cash directly to your General Account.
 
 <a id="vault-sorting--instant-value-replacement"></a>
 ### Vault Sorting & Instant Value Replacement
@@ -249,17 +247,16 @@ Toggle the **Calendar icon** on the Cash Flow screen to switch from the standard
 ### Fastfill One-Tap Logging
 * Configure a fastfill step increment on expense vaults (e.g. `5`, `10`, `25`) to log frequent routine items with a single tap.
 
-<a id="cash-flow-independence"></a>
-### Cash Flow Independence ("Include in the cash flow" Switch & Filter)
-* **Unified "Include in the cash flow" Switch:** Every transaction form—including Expenses, Investments, Piggy Banks, Emergency Funds, Stock Buy/Sell trades, Planned transactions, and Recurring rules—features an **"Include in the cash flow"** toggle:
-  * When enabled, the transaction impacts your Cash Flow summary and liquid balance.
-  * When disabled, the transaction updates the specific vault or budget analytics without altering your Cash Flow balance (ideal for reimbursed expenses, prepaid cards, or internal capital movements).
-* **Dedicated Cash Flow Exclude Filter:** On the Cash Flow screen, the leftmost filter button lets you **hide transactions marked as "Exclude in Cash Flow"** (disabled by default so all transactions remain visible until you toggle the filter on).
-
-<a id="tag-manager--custom-filtering"></a>
-### Tag Manager & Multi-Criteria Filtering
-* Open the **Tag Manager** from the top bar to create custom tags with dedicated color labels.
-* Combine filters on the Cash Flow bar: **Exclude in Cash Flow Toggle**, **Title Search**, **Vault Filter**, **Tag Filter**, **Category Filter**, and **Time Range Filter** (`This Month`, `Last Month`, `Last 3M`, `Last 6M`, `YTD`, `Last Year`, or `Custom Date Range`).
+<a id="multi-criteria-filtering--tag-manager"></a>
+### Multi-Criteria Filtering & Tag Manager
+* **Multi-Criteria Filter Bar:** Filter transactions simultaneously on your Cash Flow dashboard:
+  * **Title Search:** Instant keyword search across all transaction descriptions.
+  * **Categories Filter:** Multi-select modal to filter by specific transaction categories.
+  * **Vaults Filter:** Focus on movements associated with particular vaults.
+  * **Tags Filter:** Filter by custom tags created in the Tag Manager.
+  * **Status Filter:** Filter by Settled transactions, One-Time Planned commitments, or Recurring rules.
+  * **Time Range Horizon:** Switch between `All Time`, `This Month`, `Last 30 Days`, `Last Month`, `Last 3M`, `Last 6M`, `YTD`, `Last Year`, or a `Custom Date Range`.
+* **Tag Manager:** Open the Tag Manager from the top bar to create custom tags with dedicated color badges.
 
 ---
 
@@ -373,7 +370,7 @@ Access the suite from the **Tools** tab. All trajectory charts feature maximized
   4. **Future Planned Transactions**
   5. **Stocks Vault & Buy/Sell Trades**
   6. **Dividend Tracker & Stock Vault Sync**
-  7. **Cash Flow Independence (Non-Deducted Expenses)**
+  7. **Daily Vault P&L Update**
 * **Realistic Fictional Demo Mode:** Activate Demo Mode from the top bar to test all charts, Evolution Curves, Calendar views, and Stock/Dividend trackers with realistic daily, weekly, and monthly positive/negative fluctuations and an upward long-term trend—using strictly fictional sample companies and tickers (`NovaTech Corp. (NVTX)`, `Apex Systems (APXS)`, `Prime Realty Trust (PRMT)`, `OmniBev Corp. (OMBV)`, `Global Core Equity ETF`).
 * Fully localized in 6 languages: English, Portuguese, Spanish, French, Italian, and German.
 
