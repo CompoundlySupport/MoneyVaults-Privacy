@@ -66,18 +66,19 @@ MoneyVaults avoids the pitfall of traditional budgeting apps that lump all liqui
 <a id="the-philosophy-of-mental-accounting--purpose-built-vaults"></a>
 ### 1. The Philosophy of Mental Accounting & Purpose-Built Vaults
 Traditional financial tracking often causes anxiety because money meant for living expenses is mixed with emergency reserves or stock purchases. MoneyVaults solves this by compartmentalizing money into dedicated vaults:
-* **Operational Liquidity (General Account):** Covers daily life (groceries, dining, rent, bills).
-* **Guaranteed Peace of Mind (Emergency Fund):** Preserves a designated runway (3–12 months of living expenses) shielded from daily spending.
-* **Goal-Directed Capital (Piggy Banks):** Ring-fenced savings for targeted milestones (vehicles, holidays, home down payment).
-* **Wealth Engines (Investments & Stocks):** Compounding vehicles (ETFs, index funds, dividend stocks, crypto) that generate capital gains and passive income.
+* **General Account:** Operational clearinghouse for routine living expenses, cash flow balance, and primary income.
+* **Emergency Fund:** Dedicated runway reserve preserving 3–12 months of living expenses shielded from daily spending.
+* **Piggy Bank:** Goal-directed savings for specific milestones (vacations, vehicle, tech, down payment).
+* **Investments:** Compounding wealth portfolios (ETFs, index funds, compound interest simulation).
+* **Stocks / Asset:** Equity and asset holdings with real unit tracking, weighted average cost basis (PRU), and live P&L.
 
 <a id="central-clearinghouse-the-single-general-account-architecture"></a>
 ### 2. Central Clearinghouse: The Single General Account Architecture
 The **General Account** operates as the central clearinghouse of your entire financial life:
-* All external income (such as monthly salaries, bonuses, or freelance income) flows into the General Account.
-* All routine living expenses exit directly from the General Account.
-* When you save money or invest, capital moves **out** of the General Account and **into** the respective target vault.
-* When you withdraw money from savings or reserves to cover an unexpected expense, capital moves **out** of the reserve vault and **back into** the General Account.
+* All **Income** (such as salaries, bonuses, or freelance income) flows into the **General Account**.
+* All **Expenses** exit directly from the **General Account**.
+* When you allocate capital or save, funds move from the **General Account** into the target vault (**Emergency Fund**, **Piggy Bank**, **Investments**, or **Stocks / Asset**).
+* When you withdraw capital from reserves, it returns directly to the **General Account**.
 
 > [!IMPORTANT]
 > **Single General Account Rule:** To maintain unambiguous mathematical integrity in budget calculations, cash flow surplus tracking, and inter-vault transfers, MoneyVaults features **strictly one General Account**. Additional vaults can be created without limit for Emergency Reserves, Piggy Banks, Investments, and Stock Assets, but all operational living cash flows through the single clearinghouse.
@@ -85,34 +86,37 @@ The **General Account** operates as the central clearinghouse of your entire fin
 <a id="capital-flow-architecture-diagram"></a>
 ### 3. Capital Flow Architecture Diagram
 
-The flow of funds between the external world, your General Account, and your specialized wealth vaults follows a clear, predictable circuit:
+The flow of funds between external income, your General Account, and your specialized wealth vaults follows a clear, predictable circuit using the exact terminology from the app interface:
 
 ```mermaid
 flowchart TD
-    ExternalIncome["💰 External Income: Salary, Freelance, Business"]
-    GA["💳 General Account: Operational Living Budget"]
-    LivingExpenses["🛒 Living Expenses: Rent, Groceries, Dining, Bills"]
-    Reserves["🛡️ Savings & Reserves: Emergency Fund, Piggy Banks"]
-    Assets["📈 Asset & Equity Vaults: Stocks, ETFs, Crypto"]
-    Dividends["💵 Dividend Payouts: Received & Projected"]
+    Income["Income"]
+    Dividends["Dividends"]
+    General["General Account"]
+    Expenses["Expenses"]
+    Emergency["Emergency Fund"]
+    Piggy["Piggy Bank"]
+    Investments["Investments"]
+    Stocks["Stocks / Asset"]
 
-    ExternalIncome -->|Inflow| GA
-    GA -->|Outflow| LivingExpenses
+    Income -->|Inflow| General
+    General -->|Outflow| Expenses
 
-    GA -->|Capital Allocation| Reserves
-    Reserves -->|Capital Drawdown| GA
+    General <-->|Transfer / Withdrawal| Emergency
+    General <-->|Transfer / Withdrawal| Piggy
+    General <-->|Transfer / Withdrawal| Investments
+    General <-->|Buy / Sell| Stocks
 
-    GA -->|Buy Trades| Assets
-    Assets -->|Sell Proceeds| GA
+    Dividends -->|Inflow| Stocks
+    Dividends -.->|Cash Flow| General
 
-    Dividends -->|Vault Inflow| Assets
-    Dividends -.->|Optional Cash Flow| GA
-
-    style GA fill:#0f172a,stroke:#0d9488,stroke-width:3px,color:#f8fafc
-    style ExternalIncome fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#f8fafc
-    style LivingExpenses fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#f8fafc
-    style Reserves fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#f8fafc
-    style Assets fill:#312e81,stroke:#6366f1,stroke-width:2px,color:#f8fafc
+    style General fill:#0f172a,stroke:#0d9488,stroke-width:2px,color:#f8fafc
+    style Income fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#f8fafc
+    style Expenses fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#f8fafc
+    style Emergency fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#f8fafc
+    style Piggy fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#f8fafc
+    style Investments fill:#312e81,stroke:#6366f1,stroke-width:2px,color:#f8fafc
+    style Stocks fill:#312e81,stroke:#6366f1,stroke-width:2px,color:#f8fafc
     style Dividends fill:#581c87,stroke:#a855f7,stroke-width:2px,color:#f8fafc
 ```
 
@@ -121,17 +125,17 @@ flowchart TD
 
 Every event in MoneyVaults updates the corresponding vaults with strict mathematical consistency:
 
-| Event / Operation | General Account (Operational) | Destination / Origin Vault | Budget Surplus / Deficit Impact | Vaults Monthly Evolution Mode |
+| Event / Operation (App UI) | General Account | Destination / Origin Vault | Budget Surplus / Deficit Impact | Vaults Monthly Evolution Mode |
 | :--- | :--- | :--- | :--- | :--- |
-| **Salary / External Income** | **+ Inflow** (Direct Income) | *None* | Increases Monthly Surplus | General Account: Inflow |
-| **Everyday Living Expense** | **- Outflow** (Direct Expense) | *None* | Decreases Monthly Surplus | General Account: Outflow |
-| **Deposit / Transfer to Vault** *(Piggy, Emergency, Investment)* | **- Outflow** (Capital Allocation) | **+ Inflow** (Capital Received) | Decreases General Cash | Destination Vault: Inflow |
-| **Withdrawal / Return from Vault** *(e.g. from Emergency)* | **+ Inflow** (Capital Drawdown) | **- Outflow** (Capital Withdrawn) | Increases General Cash | Origin Vault: Outflow |
-| **Asset / Stock Buy** *(`deductFromIncome = true`)* | **- Outflow** (Transfer to Asset) | **+ Inflow** (Units & Invested Capital) | Decreases General Cash | Asset Vault: Inflow |
-| **Asset / Stock Sell** *(`deductFromIncome = true`)* | **+ Inflow** (Liquidation Proceeds) | **- Outflow** (Units Disposed) | Increases General Cash | Asset Vault: Outflow |
-| **Asset / Stock Buy** *(`deductFromIncome = false`)* | *No Impact* (Pre-existing cash) | **+ Inflow** (Units & Invested Capital) | *Neutral* | Asset Vault: Inflow |
-| **Received Dividend** *(Assigned to Asset Vault)* | *No Impact* (unless cash flow) | **+ Inflow** (Dividend Yield Earned) | *Neutral* (unless cash flow) | Asset Vault: Inflow |
-| **Projected Dividend** *(Scheduled / Upcoming)* | *No Impact* | **Future Inflow Forecast** | Positive Future Inflow | Budget: Upcoming Inflow |
+| **Income** *(Salary, Freelance, Business)* | **+ Inflow** (Direct Income) | *None* | Increases Monthly Surplus | General Account: Inflow |
+| **Expenses** *(Groceries, Dining, Utilities)* | **- Outflow** (Direct Expense) | *None* | Decreases Monthly Surplus | General Account: Outflow |
+| **Transfer to Vault** *(Piggy, Emergency, Investment)* | **- Outflow** (Capital Allocation) | **+ Inflow** (Capital Received) | Decreases General Cash | Destination Vault: Inflow |
+| **Withdrawal from Vault** *(e.g. from Emergency Fund)* | **+ Inflow** (Capital Drawdown) | **- Outflow** (Capital Withdrawn) | Increases General Cash | Origin Vault: Outflow |
+| **Stocks / Asset: Buy** *(`Deduct from Income: ON`)* | **- Outflow** (Capital Transfer) | **+ Inflow** (Units & PRU Basis) | Decreases General Cash | Asset Vault: Inflow |
+| **Stocks / Asset: Sell** *(`Deduct from Income: ON`)* | **+ Inflow** (Liquidation Proceeds) | **- Outflow** (Units Disposed) | Increases General Cash | Asset Vault: Outflow |
+| **Stocks / Asset: Buy** *(`Deduct from Income: OFF`)* | *No Impact* (Pre-existing capital) | **+ Inflow** (Units & PRU Basis) | *Neutral* | Asset Vault: Inflow |
+| **Dividends: Received** *(Confirmed into Vault)* | *No Impact* (unless Cash Flow enabled) | **+ Inflow** (Dividend Yield Earned) | *Neutral* (unless Cash Flow) | Asset Vault: Inflow |
+| **Dividends: Projected** *(Upcoming Schedule)* | *No Impact* | **Future Inflow Forecast** | Positive Future Inflow | Budget: Upcoming Inflow |
 
 <a id="the-budget-surplus--deficit-equation"></a>
 ### 5. The Budget Surplus / Deficit Equation
@@ -243,7 +247,7 @@ Toggle the **Calendar icon** on the Cash Flow screen to switch from the standard
 
 <a id="fastfill-one-tap-logging"></a>
 ### Fastfill One-Tap Logging
-* Configure a fastfill step increment on expense vaults (e.g. `€5`, `€10`, `€25`) to log frequent routine items with a single tap.
+* Configure a fastfill step increment on expense vaults (e.g. `5`, `10`, `25`) to log frequent routine items with a single tap.
 
 <a id="cash-flow-independence"></a>
 ### Cash Flow Independence ("Include in the cash flow" Switch & Filter)
@@ -397,11 +401,12 @@ Access the suite from the **Tools** tab. All trajectory charts feature maximized
 MoneyVaults offers transparent, flexible pricing with an upfront **14-day risk-free free trial** on all subscription plans:
 
 ### 1. Subscription Tiers & Pricing
-* **Monthly:** €5.00 / month (with 14-Day Free Trial)
-* **3 Months:** €12.50 / quarter (Save 17%, with 14-Day Free Trial)
-* **6 Months:** €20.00 / half-year (Save 33%, with 14-Day Free Trial)
-* **Annual:** €35.00 / year (Save 42%, with 14-Day Free Trial)
-* **Lifetime Access:** €60.00 one-time purchase (Pay once, enjoy permanent unlimited access forever)
+* **Monthly:** Flexible monthly subscription (with 14-Day Free Trial)
+* **3 Months:** Quarterly subscription (Save ~17%, with 14-Day Free Trial)
+* **6 Months:** Semi-annual subscription (Save ~33%, with 14-Day Free Trial)
+* **Annual:** Annual subscription with best value (Save ~42%, with 14-Day Free Trial)
+* **Lifetime Access:** One-time purchase (Pay once, enjoy permanent unlimited access forever)
+*(Exact prices are localized to your regional currency and displayed directly in the Google Play Store checkout).*
 
 ### 2. Risk-Free Guarantee & Trial Reminders
 * **14-Day Free Trial:** Start any subscription without paying upfront. If you cancel before the 14 days end via your Google Play Store account settings, you will never be charged.
