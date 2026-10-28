@@ -7,32 +7,45 @@ Welcome to **MoneyVaults: Finances & FIRE**, the modern, offline-first personal 
 ## 📑 Table of Contents
 
 1. [Philosophy & Architecture](#-philosophy--architecture)
-2. [Quick Start Guide](#-quick-start-guide)
-3. [Understanding Vault Types & Sorting](#-understanding-vault-types--sorting)
+2. [The Vaults Interaction Philosophy & Capital Flow Dynamics](#-the-vaults-interaction-philosophy--capital-flow-dynamics)
+   - [The Philosophy of Mental Accounting & Purpose-Built Vaults](#the-philosophy-of-mental-accounting--purpose-built-vaults)
+   - [Central Clearinghouse: The Single General Account Architecture](#central-clearinghouse-the-single-general-account-architecture)
+   - [Capital Flow Architecture Diagram](#capital-flow-architecture-diagram)
+   - [Comprehensive Capital Flow Interaction Matrix](#comprehensive-capital-flow-interaction-matrix)
+   - [The Budget Surplus / Deficit Equation](#the-budget-surplus--deficit-equation)
+3. [Quick Start Guide](#-quick-start-guide)
+4. [Understanding Vault Types & Sorting](#-understanding-vault-types--sorting)
    - [Savings Goals & Emergency Funds](#savings-goals--emergency-funds)
    - [Dedicated Stock & Asset Vaults (PRU, Units & P&L)](#dedicated-stock--asset-vaults)
+   - [Single General Account Architecture](#single-general-account-architecture)
    - [Vault Sorting & Instant Value Replacement](#vault-sorting--instant-value-replacement)
-4. [Cash Flow, Calendar View & Transactions](#-cash-flow-calendar-view--transactions)
+5. [Smart Budget & Two-Level Drilldown](#-smart-budget--two-level-drilldown)
+   - [Budget Overview & Time Horizon Tabs](#budget-overview--time-horizon-tabs)
+   - [Hierarchical Two-Level Drilldown (Direct Expenses vs Vault Transfers)](#hierarchical-two-level-drilldown)
+   - [Future Forecast & Projected Dividend Inflows](#future-forecast--projected-dividend-inflows)
+6. [Cash Flow, Calendar View & Transactions](#-cash-flow-calendar-view--transactions)
    - [Interactive Monthly Calendar View](#interactive-monthly-calendar-view)
    - [Fastfill One-Tap Logging](#fastfill-one-tap-logging)
    - [Cash Flow Independence ("Include in the cash flow" Switch & Filter)](#cash-flow-independence)
    - [Tag Manager & Multi-Criteria Filtering](#tag-manager--custom-filtering)
-5. [Future Planned Transactions](#-future-planned-transactions)
-6. [Recurring Transactions & Smart Alerts](#-recurring-transactions--smart-alerts)
-7. [Dividend Tracker, Projections & Stock Vault Sync](#-dividend-tracker--stock-vault-sync)
-8. [Vaults Evolution & Trend Curves (1M, 3M, YTD, 1Y, ALL)](#-vaults-evolution--trend-curves)
-9. [Portfolio Allocation & Weights](#-portfolio-allocation--weights)
-10. [Financial Calculators Suite](#-financial-calculators-suite)
+7. [Future Planned Transactions](#-future-planned-transactions)
+8. [Recurring Transactions & Smart Alerts](#-recurring-transactions--smart-alerts)
+9. [Dividend Tracker, Projections & Multi-Vault Sync](#-dividend-tracker--stock-vault-sync)
+10. [Vaults Evolution & Trend Curves (1M, 3M, YTD, 1Y, ALL)](#-vaults-evolution--trend-curves)
+    - [Evolution & Trend Curves](#1-evolution--trend-curves-1m-3m-ytd-1y-all)
+    - [Monthly Inflow / Outflow & Cumulative Balance Modes](#2-monthly-inflow--outflow--cumulative-balance-modes)
+11. [Portfolio Allocation & Weights](#-portfolio-allocation--weights)
+12. [Financial Calculators Suite](#-financial-calculators-suite)
     - [Compound Growth & FIRE Calculator](#1-compound-growth--fire-calculator)
     - [Dividend Growth & Yield Calculator](#2-dividend-growth--yield-calculator)
     - [Loan Amortization & Early Payoff](#3-loan-amortization--early-payoff)
     - [Smart Discount Calculator](#4-smart-discount-calculator)
-11. [Interactive Tutorials & Demo Mode](#-interactive-tutorials--demo-mode)
-12. [Smart Reminders & Notifications](#-smart-reminders--notifications)
-13. [Data Center, Cloud Backup & Privacy](#-data-center-cloud-backup--privacy)
-14. [Membership Plans (Standard vs Premium)](#-membership-plans-standard-vs-premium)
-15. [Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
-16. [Support & Contact](#-support--contact)
+13. [Interactive Tutorials & Demo Mode](#-interactive-tutorials--demo-mode)
+14. [Smart Reminders & Notifications](#-smart-reminders--notifications)
+15. [Data Center, Cloud Backup & Privacy](#-data-center-cloud-backup--privacy)
+16. [Membership Plans (Standard vs Premium)](#-membership-plans-standard-vs-premium)
+17. [Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
+18. [Support & Contact](#-support--contact)
 
 ---
 
@@ -43,6 +56,87 @@ MoneyVaults is built upon three non-negotiable principles:
 * **100% Offline-First Privacy:** Your finances are your business. MoneyVaults does not require an account, does not connect to external financial servers, and never sells or uploads your data. All records remain stored locally on your device.
 * **Mathematical Precision:** No ambiguous projections. Every compound growth curve, loan amortization schedule, historical evolution curve, and portfolio weighting formula is built on transparent financial math.
 * **Frictionless Daily Tracking:** With customizable **Fastfill** buttons, auto-selected quick update inputs, and an interactive **Calendar View**, logging a daily transaction or portfolio update takes less than two seconds.
+
+---
+
+## 🔄 The Vaults Interaction Philosophy & Capital Flow Dynamics
+
+MoneyVaults avoids the pitfall of traditional budgeting apps that lump all liquid capital into a single unorganized bucket. Instead, it utilizes an advanced **multi-vault mental accounting framework** designed to balance immediate lifestyle needs against long-term compounding growth.
+
+<a id="the-philosophy-of-mental-accounting--purpose-built-vaults"></a>
+### 1. The Philosophy of Mental Accounting & Purpose-Built Vaults
+Traditional financial tracking often causes anxiety because money meant for living expenses is mixed with emergency reserves or stock purchases. MoneyVaults solves this by compartmentalizing money into dedicated vaults:
+* **Operational Liquidity (General Account):** Covers daily life (groceries, dining, rent, bills).
+* **Guaranteed Peace of Mind (Emergency Fund):** Preserves a designated runway (3–12 months of living expenses) shielded from daily spending.
+* **Goal-Directed Capital (Piggy Banks):** Ring-fenced savings for targeted milestones (vehicles, holidays, home down payment).
+* **Wealth Engines (Investments & Stocks):** Compounding vehicles (ETFs, index funds, dividend stocks, crypto) that generate capital gains and passive income.
+
+<a id="central-clearinghouse-the-single-general-account-architecture"></a>
+### 2. Central Clearinghouse: The Single General Account Architecture
+The **General Account** operates as the central clearinghouse of your entire financial life:
+* All external income (such as monthly salaries, bonuses, or freelance income) flows into the General Account.
+* All routine living expenses exit directly from the General Account.
+* When you save money or invest, capital moves **out** of the General Account and **into** the respective target vault.
+* When you withdraw money from savings or reserves to cover an unexpected expense, capital moves **out** of the reserve vault and **back into** the General Account.
+
+> [!IMPORTANT]
+> **Single General Account Rule:** To maintain unambiguous mathematical integrity in budget calculations, cash flow surplus tracking, and inter-vault transfers, MoneyVaults features **strictly one General Account**. Additional vaults can be created without limit for Emergency Reserves, Piggy Banks, Investments, and Stock Assets, but all operational living cash flows through the single clearinghouse.
+
+<a id="capital-flow-architecture-diagram"></a>
+### 3. Capital Flow Architecture Diagram
+
+The flow of funds between the external world, your General Account, and your specialized wealth vaults follows a clear, predictable circuit:
+
+```mermaid
+flowchart TD
+    ExternalIncome["💰 External Income<br/>(Salary, Freelance, Business)"] -->|Inflow (+)| GA["💳 General Account<br/>(Operational Living Budget)"]
+    GA -->|Outflow (-)| LivingExpenses["🛒 Living Expenses<br/>(Rent, Groceries, Dining, Bills)"]
+
+    GA -->|Capital Allocation (Outflow)| Reserves["🛡️ Savings & Reserves<br/>(Emergency Fund, Piggy Banks)"]
+    Reserves -->|Capital Drawdown (Inflow)| GA
+
+    GA -->|Buy Trades: deductFromIncome| Assets["📈 Asset & Equity Vaults<br/>(Stocks, ETFs, Crypto, Real Estate)"]
+    Assets -->|Sell Proceeds: deductFromIncome| GA
+
+    Dividends["💵 Dividend Payouts<br/>(Received & Projected)"] -->|Vault Inflow (+)| Assets
+    Dividends -.->|Optional Cash Flow (+)| GA
+
+    style GA fill:#0f172a,stroke:#0d9488,stroke-width:3px,color:#f8fafc
+    style ExternalIncome fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#f8fafc
+    style LivingExpenses fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#f8fafc
+    style Reserves fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#f8fafc
+    style Assets fill:#312e81,stroke:#6366f1,stroke-width:2px,color:#f8fafc
+    style Dividends fill:#581c87,stroke:#a855f7,stroke-width:2px,color:#f8fafc
+```
+
+<a id="comprehensive-capital-flow-interaction-matrix"></a>
+### 4. Comprehensive Capital Flow Interaction Matrix
+
+Every event in MoneyVaults updates the corresponding vaults with strict mathematical consistency:
+
+| Event / Operation | General Account (Operational) | Destination / Origin Vault | Budget Surplus / Deficit Impact | Vaults Monthly Evolution Mode |
+| :--- | :--- | :--- | :--- | :--- |
+| **Salary / External Income** | **+ Inflow** (Direct Income) | *None* | Increases Monthly Surplus | General Account: Inflow |
+| **Everyday Living Expense** | **- Outflow** (Direct Expense) | *None* | Decreases Monthly Surplus | General Account: Outflow |
+| **Deposit / Transfer to Vault** *(Piggy, Emergency, Investment)* | **- Outflow** (Capital Allocation) | **+ Inflow** (Capital Received) | Decreases General Cash | Destination Vault: Inflow |
+| **Withdrawal / Return from Vault** *(e.g. from Emergency)* | **+ Inflow** (Capital Drawdown) | **- Outflow** (Capital Withdrawn) | Increases General Cash | Origin Vault: Outflow |
+| **Asset / Stock Buy** *(`deductFromIncome = true`)* | **- Outflow** (Transfer to Asset) | **+ Inflow** (Units & Invested Capital) | Decreases General Cash | Asset Vault: Inflow |
+| **Asset / Stock Sell** *(`deductFromIncome = true`)* | **+ Inflow** (Liquidation Proceeds) | **- Outflow** (Units Disposed) | Increases General Cash | Asset Vault: Outflow |
+| **Asset / Stock Buy** *(`deductFromIncome = false`)* | *No Impact* (Pre-existing cash) | **+ Inflow** (Units & Invested Capital) | *Neutral* | Asset Vault: Inflow |
+| **Received Dividend** *(Assigned to Asset Vault)* | *No Impact* (unless cash flow) | **+ Inflow** (Dividend Yield Earned) | *Neutral* (unless cash flow) | Asset Vault: Inflow |
+| **Projected Dividend** *(Scheduled / Upcoming)* | *No Impact* | **Future Inflow Forecast** | Positive Future Inflow | Budget: Upcoming Inflow |
+
+<a id="the-budget-surplus--deficit-equation"></a>
+### 5. The Budget Surplus / Deficit Equation
+
+In the **Budget** tab, the real operational performance of your month is measured specifically through the **General Account**:
+
+$$\text{Budget Surplus / Deficit} = \text{Income} - \text{Direct Expenses} + (\text{Withdrawals from Vaults} - \text{Capital Allocated to Vaults})$$
+
+This formulation guarantees that:
+1. Moving money to your Emergency Fund or buying an ETF correctly reflects as capital leaving your everyday checking account.
+2. Reimbursing yourself from savings correctly restores operational liquidity without distorting your regular employment income.
+3. You know at any given moment whether your operational lifestyle generated excess cash or required dipping into reserves.
 
 ---
 
@@ -84,6 +178,42 @@ MoneyVaults organizes your wealth into dedicated, purpose-built vaults:
 * **Custom Vault Sorting:** Sort your vaults list by **Default**, **Balance (High to Low)**, **Name (A–Z)**, or **Vault Type**.
 * **Instant Value Replacement:** When you tap **Update P&L**, **Update Price**, or **Update Base**, the input field opens immediately focused and pre-selected so typing a new number replaces the previous value right away without needing to backspace.
 * **Quick Add Transaction:** Inside any Vault Details screen, the **`+`** button to log a new transaction is positioned as the leftmost action in the header bar for rapid access.
+
+<a id="single-general-account-architecture"></a>
+### Single General Account Architecture
+* The **General Account** is created automatically as your operational default vault.
+* To prevent accounting discrepancies in monthly budget surplus and inter-vault capital routing, creating additional General/Expense accounts is intentionally restricted. All operational living expenses and transfers flow through this unified account, while any number of additional Piggy Banks, Emergency Funds, Investment Vaults, and Asset Vaults can be created freely.
+
+---
+
+## 🧭 Smart Budget & Two-Level Drilldown
+
+<a id="smart-budget--two-level-drilldown"></a>
+The **Budget** screen provides complete forward-looking and historical transparency over where your money came from and where it went.
+
+<a id="budget-overview--time-horizon-tabs"></a>
+### 1. Budget Overview & Time Horizon Tabs
+* **Monthly Horizon Selector:** Navigate effortlessly between **Past Months**, the **Current Month**, and the **Next Month / Future Forecast**.
+* **Inflows vs Outflows Header:** View real-time visual progress bars showing your budgeted income vs actual received inflows, as well as budgeted expenses vs actual outflows.
+* **Operational Surplus / Deficit Gauge:** Instantly spot whether your General Account closed (or is projected to close) with a positive cash surplus or a deficit based on living expenses and inter-vault allocations.
+
+<a id="hierarchical-two-level-drilldown"></a>
+### 2. Hierarchical Two-Level Drilldown (Direct Expenses vs Vault Transfers)
+When inspecting the **General Account Outflows**, MoneyVaults separates operational lifestyle spending from wealth accumulation:
+
+1. **Level 1 — High-Level Differentiation:**
+   * **Direct Expenses:** All routine expenditures (Groceries, Dining, Utilities, Subscriptions, Housing).
+   * **Vault Transfers (Grouped by Target Vault):** Distinct clusters for capital allocated to other vaults (e.g., "Emergency Fund", "Tech Stocks", "Vacation Piggy").
+2. **Level 2 — Transaction & Tag Inspection:**
+   * Tapping into **Direct Expenses** reveals the tag breakdown (e.g., `#groceries`, `#transport`, `#health`) with aggregated totals.
+   * Tapping into a specific **Vault Transfer** (e.g. `Tech Stocks`) lists all individual purchase transfers made toward that holding.
+   * **Protected Header Layout:** The drilldown header features a dedicated breadcrumb trail (`General Account › Outflows`) above the active category title and isolates the total amount badge on the right, completely eliminating text truncation and overlap across all screen densities.
+
+<a id="future-forecast--projected-dividend-inflows"></a>
+### 3. Future Forecast & Projected Dividend Inflows
+When viewing **Next Month** or upcoming budget horizons:
+* Upcoming planned transactions and recurring rules are automatically plotted.
+* **Scheduled Dividend Inflows:** Recurring and scheduled dividends are calculated based on pay frequency and credited as forecasted inflows into their respective holding vaults, giving you a full, reliable projection of passive income and operational cash.
 
 ---
 
@@ -141,7 +271,7 @@ Automate routine obligations:
 
 ---
 
-## 💰 Dividend Tracker, Projections & Stock Vault Sync
+## 💰 Dividend Tracker, Projections & Multi-Vault Sync
 
 <a id="-dividend-tracker--stock-vault-sync"></a>
 Track and project passive income from equity holdings:
@@ -149,6 +279,7 @@ Track and project passive income from equity holdings:
 * **Stock Vault Integration:** Select your stock vault to automatically fetch current shares owned and calculate projected gross and net payouts.
 * **Tax Withholding:** Specify tax withholding percentages (e.g. 15% or 28%) to forecast true take-home passive cash.
 * **Payout Calendar:** View upcoming dividend dates and confirm received dividends directly into your Cash Flow balance.
+* **Multi-Vault Inflow Integration:** Dividends confirmed into the portfolio are recognized as capital inflows in their respective vaults (Asset, Investment, or General Account). In the Smart Budget, upcoming scheduled dividends automatically feed the projected inflow forecast for their assigned vaults.
 * **Dividend Projections Dashboard:**
   * Tap the chart icon in the Dividend Tracker top bar to open the **Projections** screen.
   * Switch between 5 horizons: **1M**, **3M**, **6M**, **End of Year (YTD)**, and **1Y**.
@@ -179,9 +310,14 @@ Analyze both short-term and multi-year wealth trajectories from the **Vaults Evo
   * MoneyVaults automatically captures local snapshots at `00:00` and applies **First-In-First-Out (FIFO)** retention pruning to keep storage fast and lightweight.
   * Any period prior to a vault's creation date is automatically anchored at `0`.
 
-### 2. Monthly Stacked Bar Evolution (3M & 6M)
+<a id="monthly-inflow--outflow--cumulative-balance-modes"></a>
+### 2. Monthly Inflow / Outflow & Cumulative Balance Modes
 * **Interactive Multi-Month Chart:** View stacked bar charts comparing vault performance over **3-Month** and **6-Month** horizons.
-* **Dual View Modes:** Switch between **Cumulative Balance** and **Monthly Net Flow**, with localized month formatting and tap-to-inspect breakdowns.
+* **Three View Modes with Fluid Scrollable Pills:** Switch seamlessly between:
+  * **Cumulative Balance:** Total wealth accumulated across all vaults.
+  * **Monthly Inflows:** New capital deposited, shares bought, and dividends earned per vault.
+  * **Monthly Outflows:** Capital withdrawn or liquidated per vault.
+* **Responsive Pill Navigation:** Designed with modern, horizontally scrollable chips ensuring full, clear labels without text clipping in all languages.
 
 ---
 
