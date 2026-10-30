@@ -107,7 +107,7 @@ flowchart TD
     General <-->|Buy / Sell| Stocks
 
     Dividends -->|Inflow| Stocks
-    Dividends -.->|Cash Flow| General
+    Dividends -.->|Cashflow| General
 
     style General fill:#0f172a,stroke:#0d9488,stroke-width:2px,color:#f8fafc
     style Income fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#f8fafc
@@ -132,20 +132,28 @@ Every event in MoneyVaults updates the corresponding vaults with strict mathemat
 | **Withdrawal from Vault** *(e.g. from Emergency Fund)* | **+ Inflow** (Capital Drawdown) | **- Outflow** (Capital Withdrawn) | Increases General Cash | Origin Vault: Outflow |
 | **Stocks / Asset: Buy** *(Buy Shares / Units)* | **- Outflow** (Capital Allocation) | **+ Inflow** (Units & PRU Basis) | Decreases General Cash | Asset Vault: Inflow |
 | **Stocks / Asset: Sell** *(Sell Shares / Units)* | **+ Inflow** (Liquidation Proceeds) | **- Outflow** (Units Disposed) | Increases General Cash | Asset Vault: Outflow |
-| **Dividends: Received** *(Confirmed into Chosen Vault)* | **+ Inflow** *(if General Account)* | **+ Inflow** *(if Target Vault)* | Real Inflow in Chosen Vault | Chosen Vault: Inflow |
-| **Dividends: Projected** *(Upcoming Schedule)* | *Future Inflow Forecast* | *Future Inflow Forecast* | Positive Future Inflow | Budget: Upcoming Inflow |
+| **Dividends: Received (to General Account)** | **+ Cashflow (Inflow)** | *None* | Increases Monthly Surplus | General Account: Inflow |
+| **Dividends: Received (to Asset / Investment Vault)** | *Neutral (No Cashflow Impact)* | **+ Inflow** (Capital Reinvestment) | Neutral for Budget | Destination Vault: Inflow |
+| **Dividends: Projected** *(Upcoming Schedule)* | *Future Cashflow Forecast (if General)* | *Future Inflow Forecast (if Vault)* | Positive Future Inflow | Budget: Upcoming Inflow |
 
 <a id="the-budget-surplus--deficit-equation"></a>
 ### 5. The Budget Surplus / Deficit Equation
 
-In the **Budget** tab, the real operational performance of your month is measured specifically through the **General Account**:
+The **Budget** screen is purposefully scoped to measure the operational cash performance of your **General Account** (your everyday checking / clearinghouse account). It does not muddle your lifestyle budget with internal asset balance changes.
 
-$$\text{Budget Surplus / Deficit} = \text{Income} - \text{Direct Expenses} + (\text{Withdrawals from Vaults} - \text{Capital Allocated to Vaults})$$
+$$\text{Budget Surplus / Deficit} = \text{Total Inflows} - \text{Total Outflows}$$
+
+Where:
+
+$$\text{Total Inflows} = \text{Income} + \text{Dividends (to General Account)} + \text{Vault Returns (Withdrawals / Asset Sales)}$$
+
+$$\text{Total Outflows} = \text{Expenses} + \text{Transfers to Vaults (Savings Allocations / Asset Buys)}$$
 
 This formulation guarantees that:
-1. Moving money to your Emergency Fund or buying an ETF correctly reflects as capital leaving your everyday checking account.
-2. Reimbursing yourself from savings correctly restores operational liquidity without distorting your regular employment income.
-3. You know at any given moment whether your operational lifestyle generated excess cash or required dipping into reserves.
+1. **Clear Income & Passive Cash:** Regular employment income and dividends intended for living expenses (Cashflow to General Account) are recognized as spendable inflows.
+2. **True Savings & Asset Purchases:** Moving money to your Emergency Fund, funding a savings goal, or buying an ETF correctly reflects as an outflow leaving your everyday account.
+3. **Restoring Liquidity:** Reimbursing yourself from savings or liquidating asset holdings back into the General Account correctly restores operational liquidity (Vault Returns).
+4. **Isolated Vault Growth:** Dividends retained inside stock or investment vaults count as internal vault inflows (reinvestments) without distorting everyday lifestyle metrics.
 
 ---
 
@@ -198,13 +206,24 @@ MoneyVaults organizes your wealth into dedicated, purpose-built vaults:
 ## 🧭 Smart Budget & Two-Level Drilldown
 
 <a id="smart-budget--two-level-drilldown"></a>
-The **Budget** screen provides complete forward-looking and historical transparency over where your money came from and where it went.
+The **Budget** screen is strictly dedicated to presenting the **Inflows** and **Outflows** of the **General Account** (your everyday operational clearinghouse). It provides complete forward-looking and historical transparency over where your cash came from and where it went.
 
 <a id="budget-overview--time-horizon-tabs"></a>
-### 1. Budget Overview & Time Horizon Tabs
-* **Monthly Horizon Selector:** Navigate effortlessly between **Past Months**, the **Current Month**, and the **Next Month / Future Forecast**.
-* **Inflows vs Outflows Header:** View real-time visual progress bars showing your budgeted income vs actual received inflows, as well as budgeted expenses vs actual outflows.
-* **Operational Surplus / Deficit Gauge:** Instantly spot whether your General Account closed (or is projected to close) with a positive cash surplus or a deficit based on living expenses and inter-vault allocations.
+### 1. Budget Overview & Calculation Formula
+
+In the Budget screen, the financial health of your period is calculated exclusively from the General Account circuit:
+
+* **Inflows:** All incoming operational cash:
+  * **Income:** Salaries, freelancing, and direct cash revenues.
+  * **Dividends:** Dividend distributions confirmed to the General Account as spendable cash flow.
+  * **Vault Returns (Retorno dos cofres):** Capital returning to the General Account (withdrawals from Emergency Reserves, redemptions from Piggy Banks, or net proceeds from stock/asset sales).
+* **Outflows:** All exiting operational cash:
+  * **Expenses:** Routine living expenses (groceries, utilities, dining, subscriptions).
+  * **Transfers to Vaults (Transferências para cofres):** Capital allocated away from the General Account to build wealth (savings transferred to Emergency Funds, Piggy Banks, or stock purchases / asset buys).
+* **Operational Surplus / Deficit:**
+  $$\text{Budget Balance} = \text{Inflows} - \text{Outflows}$$
+  * **Surplus (Positive):** Living cash was generated and remained unspent in your checking clearinghouse.
+  * **Deficit (Negative):** Spending and vault contributions exceeded incoming revenues, drawing down existing checking balances or requiring vault liquidations.
 
 <a id="hierarchical-two-level-drilldown"></a>
 ### 2. Hierarchical Two-Level Drilldown (Direct Expenses vs Vault Transfers)
@@ -287,7 +306,10 @@ Track and project passive income from equity holdings:
 * **Stock Vault Integration:** Select your stock vault to automatically fetch current shares owned and calculate projected gross and net payouts.
 * **Tax Withholding:** Specify tax withholding percentages (e.g. 15% or 28%) to forecast true take-home passive cash.
 * **Payout Calendar:** View upcoming dividend dates and confirm received dividends directly into your Cash Flow balance.
-* **Multi-Vault Inflow Integration:** Dividends confirmed into the portfolio are recognized as capital inflows in their respective vaults (Asset, Investment, or General Account). In the Smart Budget, upcoming scheduled dividends automatically feed the projected inflow forecast for their assigned vaults.
+* **Multi-Vault Dividend Flow Architecture:**
+  * **Cashflow for General Account:** When dividends are directed to the **General Account**, they are recognized as spendable operational cashflow. They appear in your Cash Flow balance and count as **Inflows** in the **Budget** screen.
+  * **Inflow for Other Vaults:** When dividends are directed to other specialized vaults (**Stocks / Asset**, **Investments**, or **Savings**), they are recorded as **Inflows** specifically within that target vault. They increase the vault's accumulated capital and portfolio value without inflating operational checking cash in the Budget screen.
+  * In the Smart Budget, upcoming scheduled dividends automatically feed the projected inflow forecast for their assigned vaults.
 * **Dividend Projections Dashboard:**
   * Tap the chart icon in the Dividend Tracker top bar to open the **Projections** screen.
   * Switch between 5 horizons: **1M**, **3M**, **6M**, **End of Year (YTD)**, and **1Y**.
