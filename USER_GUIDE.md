@@ -14,11 +14,11 @@ Welcome to **MoneyVaults: Finances & FIRE**, the modern, offline-first personal 
    - [Comprehensive Capital Flow Interaction Matrix](#comprehensive-capital-flow-interaction-matrix)
    - [The Budget Surplus / Deficit Equation](#the-budget-surplus--deficit-equation)
 3. [Quick Start Guide](#-quick-start-guide)
-4. [Understanding Vault Types & Sorting](#-understanding-vault-types--sorting)
+4. [Understanding Vault Types, Sorting & Custom Ordering](#-understanding-vault-types--sorting)
    - [Savings Goals & Emergency Funds](#savings-goals--emergency-funds)
    - [Dedicated Stock & Asset Vaults (PRU, Units & P&L)](#dedicated-stock--asset-vaults)
-   - [Single General Account Architecture](#single-general-account-architecture)
-   - [Vault Sorting & Instant Value Replacement](#vault-sorting--instant-value-replacement)
+   - [Single General Account Architecture & Cash Flow Intelligence](#single-general-account-architecture)
+   - [Vault Sorting, Drag & Drop Reordering & Instant Value Replacement](#vault-sorting--instant-value-replacement)
 5. [Smart Budget & Two-Level Drilldown](#-smart-budget--two-level-drilldown)
    - [Budget Overview & Time Horizon Tabs](#budget-overview--time-horizon-tabs)
    - [Hierarchical Two-Level Drilldown (Direct Expenses vs Vault Transfers)](#hierarchical-two-level-drilldown)
@@ -31,7 +31,7 @@ Welcome to **MoneyVaults: Finances & FIRE**, the modern, offline-first personal 
 8. [Recurring Transactions & Smart Alerts](#-recurring-transactions--smart-alerts)
 9. [Dividend Tracker, Projections & Multi-Vault Sync](#-dividend-tracker--stock-vault-sync)
 10. [Vaults Evolution & Trend Curves (1M, 3M, YTD, 1Y, ALL)](#-vaults-evolution--trend-curves)
-    - [Evolution & Trend Curves](#1-evolution--trend-curves-1m-3m-ytd-1y-all)
+    - [Evolution & Trend Curves (Dual Scale & Live P&L %)](#1-evolution--trend-curves-1m-3m-ytd-1y-all)
     - [Monthly Inflow / Outflow & Cumulative Balance Modes](#2-monthly-inflow--outflow--cumulative-balance-modes)
 11. [Portfolio Allocation & Weights](#-portfolio-allocation--weights)
 12. [Financial Calculators Suite](#-financial-calculators-suite)
@@ -41,7 +41,7 @@ Welcome to **MoneyVaults: Finances & FIRE**, the modern, offline-first personal 
     - [Smart Discount Calculator](#4-smart-discount-calculator)
 13. [Interactive Tutorials & Demo Mode](#-interactive-tutorials--demo-mode)
 14. [Smart Reminders & Notifications](#-smart-reminders--notifications)
-15. [Data Center, Cloud Backup & Privacy](#-data-center-cloud-backup--privacy)
+15. [Data Center, Cloud Backup & Biometric Privacy](#-data-center-cloud-backup--privacy)
 16. [Membership Plans (Standard vs Premium)](#-membership-plans-standard-vs-premium)
 17. [Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
 18. [Support & Contact](#-support--contact)
@@ -181,7 +181,7 @@ MoneyVaults organizes your wealth into dedicated, purpose-built vaults:
 | **🛡️ Emergency Fund** | Runway reserve for peace of mind. | Monthly burn rate calculator, months of runway covered. |
 | **📈 Investment & Wealth** | Compounding assets (ETFs, Funds, Real Estate, Crypto). | Compound growth engine, P&L tracking, auto-reinvestment simulation, capital target. |
 | **📊 Stock / Equity Vault** | Individual stocks & ETF portfolio positions. | Ticker symbol, unit tracking, average acquisition cost (PRU), live P&L. |
-| **💳 Expense & Budget** | Daily operational spending (Groceries, Dining, Utilities). | Fastfill one-tap logging, categorized expenditure summaries. |
+| **💳 General Account & Everyday** | Central clearinghouse for income, expenses, and transfers. | Fastfill one-tap logging, categorized expenditure summaries, and **Cash Flow Intelligence** (record expenses/incomes, tag analytics, net variation, daily averages). |
 
 <a id="dedicated-stock--asset-vaults"></a>
 ### Dedicated Stock & Asset Vaults
@@ -191,15 +191,21 @@ MoneyVaults organizes your wealth into dedicated, purpose-built vaults:
 * **Cash Flow Integration:** Buy trades allocate investment capital from your General Account to build your position, while sell trades liquidate units and return cash directly to your General Account.
 
 <a id="vault-sorting--instant-value-replacement"></a>
-### Vault Sorting & Instant Value Replacement
-* **Custom Vault Sorting:** Sort your vaults list by **Default**, **Balance (High to Low)**, **Name (A–Z)**, or **Vault Type**.
+### Vault Sorting, Drag & Drop Reordering & Instant Value Replacement
+* **Drag & Drop Vault Reordering (Premium):** In the Premium version, customize the order of your vault cards by long-pressing and dragging the 3-dots handle (`⋮⋮`). Your customized sequence is automatically remembered across app sessions.
+* **Custom Order Sorting Option:** In the **Sort Vaults** bottom sheet, a dedicated **"Custom Order"** option is available alongside Default, Balance, Name, and Vault Type, allowing you to instantly restore your preferred arrangement at any time.
 * **Instant Value Replacement:** When you tap **Update P&L**, **Update Price**, or **Update Base**, the input field opens immediately focused and pre-selected so typing a new number replaces the previous value right away without needing to backspace.
 * **Quick Add Transaction:** Inside any Vault Details screen, the **`+`** button to log a new transaction is positioned as the leftmost action in the header bar for rapid access.
 
 <a id="single-general-account-architecture"></a>
-### Single General Account Architecture
+### Single General Account Architecture & Cash Flow Intelligence
 * The **General Account** is created automatically as your operational default vault.
 * To prevent accounting discrepancies in monthly budget surplus and inter-vault capital routing, creating additional General/Expense accounts is intentionally restricted. All operational living expenses and transfers flow through this unified account, while any number of additional Piggy Banks, Emergency Funds, Investment Vaults, and Asset Vaults can be created freely.
+* **Cash Flow Intelligence (Premium):** The General Account details screen features an intelligent analytics engine:
+  * **Record Expenses & Incomes:** Highlights the single highest expense and highest income of all time, within the active time filter, and broken down by top category tag.
+  * **Balance Progression:** Details the exact starting balance, ending balance, and net change (both absolute amount and percentage variation) across the selected timeframe.
+  * **Daily Spending Rate:** Computes your average daily burn rate across the active filter window.
+  * **Seamless Pro Integration:** This analytics suite is a Premium feature (Free users see an elegant preview lock banner matching the app's visual identity, and the PRO badge is automatically hidden for active Premium users). Fastfill remains conveniently accessible on the General Account card in the main Vaults tab.
 
 ---
 
@@ -333,9 +339,19 @@ Analyze both short-term and multi-year wealth trajectories from the **Vaults Evo
   * **YTD (Year-to-Date):** Weekly resolution from January 1st.
   * **1Y (1 Year):** Weekly resolution (up to 53 weekly points).
   * **ALL (All-Time):** Monthly resolution across your entire history.
-* **Natural Dual-Curve Comparison (Current Balance & P&L):**
+* **Natural Dual-Curve Comparison with Live Dynamic P&L % Scrubbing:**
   * View **Current Balance** and **Profit & Loss (P&L)** plotted on a unified, natural monetary scale with a dashed `0` baseline and clear Y-axis value labels so the curves never artificially converge or distort.
-  * Scrub across the chart to inspect exact dates, balances, P&L figures, and period variations.
+  * Touch-scrub across the chart to inspect exact dates, balances, and P&L figures. For applicable vaults (Investment, Stock, and Asset vaults), the cursor dynamically recalculates and displays the exact P&L percentage (`+€XX.XX (+YY.Y%)`) in real time, matching the portfolio-level evolution curve.
+* **Refactored P&L Performance Cards:**
+  * The P&L KPI card provides a complete, unified overview:
+    * **Total P&L** & **Total P&L %** (all-time cumulative return since vault inception).
+    * **Period P&L** & **Period P&L %** (performance specific to the selected timeframe).
+* **Net Inflows vs Net P&L Period Breakdown:**
+  * The **Period Change** KPI card explicitly separates overall wealth change into **Net Inflows** (new capital deposits/purchases minus withdrawals/sales) versus **Net P&L** (pure market capital gains/losses), providing 100% clarity on how much growth was earned versus contributed.
+* **Clear Time Filter Button:**
+  * Inside any Vault Details screen, a convenient **Clear Time Filter** button allows you to instantly reset custom time filters back to the full history with a single tap.
+* **Clean, Uncluttered Interface:**
+  * Screen titles in Portfolio Evolution & Performance and Tap Manager are streamlined, removing redundant explanatory subtitle paragraphs for a cleaner display.
 * **Automated `00:00` Snapshots & FIFO Pruning:**
   * MoneyVaults automatically captures local snapshots at `00:00` and applies **First-In-First-Out (FIFO)** retention pruning to keep storage fast and lightweight.
   * Any period prior to a vault's creation date is automatically anchored at `0`.
@@ -407,10 +423,11 @@ Access the suite from the **Tools** tab. All trajectory charts feature maximized
 
 ---
 
-## ☁️ Data Center, Cloud Backup & Privacy
+## ☁️ Data Center, Cloud Backup & Biometric Privacy
 
 * **1-Tap Cloud Backup:** Save complete portfolio backups (including historical vault snapshots) directly to **Google Drive, iCloud Drive, Nextcloud, Dropbox**, or local device storage.
 * **JSON Portability:** Export and restore your complete portfolio with zero data loss.
+* **Biometric Factory Reset Protection:** To prevent accidental data erasure, triggering **Backup & Factory Reset** requires mandatory local biometric authentication (fingerprint, face unlock, or device PIN).
 * **Clean Slate Reset:** Switch between Demo Mode and your real portfolio or reset to a clean blank slate at any time.
 
 ---
@@ -430,13 +447,16 @@ MoneyVaults offers transparent, flexible pricing with an upfront **14-day risk-f
 ### 2. Risk-Free Guarantee & Trial Reminders
 * **14-Day Free Trial:** Start any subscription without paying upfront. If you cancel before the 14 days end via your Google Play Store account settings, you will never be charged.
 * **Day 10 Local Reminder Alert:** The app automatically schedules a local reminder notification on Day 10 (4 days before renewal) so you never miss a billing decision.
-* **Rewarded Video Passes (100% Free):** Placed prominently directly under the primary trial button on the Plan & Subscription screen, you can watch a short rewarded video to unlock a 1-minute full Premium pass (up to 5 passes per 24 hours) whenever you need quick access to an advanced calculator or projection chart.
+* **Rewarded Video Passes (100% Free):** Placed prominently directly under the primary trial button on the Plan & Subscription screen, you can watch a short rewarded video to unlock a 30-second full Premium pass (up to 5 passes per 24 hours) whenever you need quick access to an advanced calculator, projection chart, or analytics module.
+* **Automatic Reversion to Defaults:** When a 30-second Pro Pass or subscription concludes, all screens, active category filters, custom vault arrangements, time ranges, and view modes automatically return to standard default configurations (e.g. Category Filter to All, Custom Vault Order to Default, Compact View to Grid, Time Filters to All Time, Budget Horizons to 1M historical, Calendar View to Off).
 
 ### 3. Feature Comparison
 
 | Feature | Standard Plan (Free) | MoneyVaults Premium |
 | :--- | :---: | :---: |
 | **Vault Creation** | Up to 5 Vaults | **Unlimited Vaults** |
+| **Custom Vault Reordering** | Standard Sorting | **Drag & Drop Reordering (⋮⋮) + Custom Order** |
+| **Cash Flow Intelligence** | Preview Locked | **Full General Account Analytics & KPIs** |
 | **Stock & Asset Vaults** | Included (within limit) | **Unlimited Asset Vaults** |
 | **Dividend Tracker & Projections** | Included | **Unlimited Dividends & Projections** |
 | **Recurring Rules & Alerts** | Up to 3 Active Rules | **Unlimited Active Rules** |
@@ -445,9 +465,9 @@ MoneyVaults offers transparent, flexible pricing with an upfront **14-day risk-f
 | **Discount Calculator** | ✅ Full Access | ✅ Full Access |
 | **Financial Calculators Suite** | Read-Only Preview | **Full Interactive Access** |
 | **Portfolio Allocation & Weights** | Basic Summary | **Full Visual Analytics** |
-| **Evolution & Trend Curves** | Current Horizon Preview | **All Horizons (1M, 3M, YTD, 1Y, ALL)** |
+| **Evolution & Trend Curves** | Current Horizon Preview | **All Horizons (1M, 3M, YTD, 1Y, ALL) + Live P&L %** |
 | **Cloud & JSON Backup** | ✅ Included | ✅ Included |
-| **Ad-Free Experience** | 5 Video Passes (1m each) / 24h | **Permanent Unrestricted Access** |
+| **Ad-Free Experience** | 5 Video Passes (30s each) / 24h | **Permanent Unrestricted Access** |
 
 ---
 

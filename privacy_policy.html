@@ -157,7 +157,7 @@
   <div class="container">
     <div class="badge">Legal & Privacy Center</div>
     <h1>MoneyVaults: Finances & FIRE</h1>
-    <div class="last-updated">Effective Date & Last Updated: October 26, 2026</div>
+    <div class="last-updated">Effective Date & Last Updated: October 31, 2026</div>
 
     <div class="nav-bar">
       <a href="#privacy" class="nav-btn active">1. Privacy Policy</a>
@@ -186,14 +186,15 @@
       <p>The following data remains strictly inside your local device storage:</p>
       <ul>
         <li><strong>Smart Vaults & Asset Portfolios:</strong> Vault names, target amounts, categories, and dedicated stock/equity portfolios (ticker symbols, units owned, average acquisition cost PRU, market prices, and buy/sell trade logs).</li>
-        <li><strong>Evolution & Trend Curve Snapshots:</strong> Locally computed 00:00 daily, weekly, and monthly vault snapshots (for 1M, 3M, YTD, 1Y, and All-Time trend curves) with automatic First-In-First-Out (FIFO) local retention pruning.</li>
+        <li><strong>Cash Flow Intelligence & General Account KPIs:</strong> Locally computed operational metrics for the General Account (all-time and period record expenses/incomes, top spending/revenue tags, starting/ending balances with absolute and percentage variations, and daily spending averages).</li>
+        <li><strong>Evolution & Trend Curve Snapshots:</strong> Locally computed 00:00 daily, weekly, and monthly vault snapshots (for 1M, 3M, YTD, 1Y, and All-Time trend curves) with automatic First-In-First-Out (FIFO) local retention pruning, real-time dynamic P&L % touch scrubbing, and period change breakdowns (separating net capital inflows from net investment P&L).</li>
         <li><strong>Cash Flow, Calendar & Planned Commitments:</strong> Everyday transactions, interactive monthly calendar items, planned one-time future transactions with scheduled due dates, and cash flow inclusion settings ("Include in the cash flow" toggle).</li>
         <li><strong>Dividend Tracker & Projections:</strong> Payout amounts, tax withholding rates, payment frequency, linked stock vaults, multi-horizon forecasts (1M, 3M, 6M, End of Year, 1Y), and monthly average reference indicators.</li>
         <li><strong>Recurring Rules & Alerts:</strong> Scheduled recurring rules, monthly due days, Day 10 trial end cancellation reminders, and local device push notification schedules.</li>
         <li><strong>Tags & Categories:</strong> User-defined custom tags, color palettes, and category mappings.</li>
-        <li><strong>User Preferences:</strong> Base currency formatting, multilingual settings, vault sorting order, and view modes (compact vs expanded, list vs calendar).</li>
-        <li><strong>Temporary Pro Passes:</strong> Local timestamp tracking expiration of ad-rewarded Pro Passes (1 minute each, up to 5 per 24-hour window).</li>
-        <li><strong>Backups:</strong> Manual JSON backup files (including vaults, transactions, recurring rules, dividends, and trend snapshots) generated solely when you choose to export your data.</li>
+        <li><strong>User Preferences & Custom Layouts:</strong> Base currency formatting, multilingual settings, persistent custom vault order (via Drag & Drop 3-dots handle), sort options (including Custom Order), and view modes (compact vs expanded, list vs calendar).</li>
+        <li><strong>Temporary Pro Passes:</strong> Local timestamp tracking expiration of ad-rewarded Pro Passes (30 seconds each, up to 5 per 24-hour window). Upon pass expiration or subscription conclusion, all screens, custom filters, and display modes automatically revert to safe default settings.</li>
+        <li><strong>Backups & Biometric Reset Safeguard:</strong> Manual JSON backup files (including vaults, transactions, recurring rules, dividends, and trend snapshots) generated solely when you choose to export your data. Initiating a complete Backup & Factory Reset requires local device biometric authentication (fingerprint, face unlock, or device PIN) to prevent accidental data erasure.</li>
       </ul>
 
       <h3>3. Third-Party Services & Technical Data</h3>
@@ -204,7 +205,7 @@
           See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.
         </li>
         <li>
-          <strong>Rewarded Video Ads (Google AdMob):</strong> When you voluntarily watch a video ad to unlock a 1-minute Pro Pass (limited to 5 passes per 24 hours), Google AdMob processes advertising identifiers (GAID), device diagnostics, and ad interaction data to prevent fraud. 
+          <strong>Rewarded Video Ads (Google AdMob):</strong> When you voluntarily watch a video ad to unlock a 30-second Pro Pass (limited to 5 passes per 24 hours), Google AdMob processes advertising identifiers (GAID), device diagnostics, and ad interaction data to prevent fraud. 
           See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
         </li>
       </ul>
@@ -212,12 +213,13 @@
       <h3>4. Device Permissions</h3>
       <ul>
         <li><strong>POST_NOTIFICATIONS:</strong> Used only for optional, locally scheduled expense check-ins, weekly wealth reviews, recurring transaction due alerts, planned transaction reminders, dividend reminders, and the automated Day 10 trial end reminder notification.</li>
+        <li><strong>USE_BIOMETRIC / USE_FINGERPRINT:</strong> Used strictly for local device authentication before executing sensitive actions such as a complete Backup & Factory Reset. Biometric data is validated solely by your device's operating system security hardware and is never accessed, processed, or stored by the App.</li>
         <li><strong>INTERNET:</strong> Required only for Google Play Billing validation and AdMob video playback.</li>
       </ul>
 
       <h3>5. Data Deletion</h3>
       <p>
-        You have complete control: you can clear all financial data at any time through the App's Data Center or by clearing the App's storage in your device settings.
+        You have complete control: you can clear all financial data at any time through the App's Data Center (protected by biometric authentication before executing a Factory Reset) or by clearing the App's storage in your device settings.
       </p>
     </section>
 
@@ -267,7 +269,7 @@
           <strong>Pricing Options:</strong> MoneyVaults Premium offers 5 tiers: Monthly (&euro;5.00/mo), 3 Months (&euro;12.50/quarter), 6 Months (&euro;20.00/half-year), Annual (&euro;35.00/year), and Lifetime Access (&euro;60.00 one-time purchase with permanent access). Prices may vary by regional currency and local taxes.
         </li>
         <li>
-          <strong>Rewarded Video Passes:</strong> Users may also unlock temporary 1-minute full Premium passes by voluntarily watching short video ads (up to 5 passes per 24 hours) with zero financial charge.
+          <strong>Rewarded Video Passes:</strong> Users may also unlock temporary 30-second full Premium passes by voluntarily watching short video ads (up to 5 passes per 24 hours) with zero financial charge. Upon expiration of any temporary pass or subscription, all premium configuration states, custom vault arrangements, and specialized filters immediately return to standard default views.
         </li>
         <li>
           <strong>Billing & Renewal:</strong> Payments are processed securely via Google Play In-App Billing. Subscriptions renew automatically unless cancelled in your Google Play Store Account Settings prior to the renewal date.

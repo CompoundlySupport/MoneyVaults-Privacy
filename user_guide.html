@@ -124,7 +124,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="badge">Official Documentation • Updated October 16, 2026</div>
+    <div class="badge">Official Documentation • Updated October 31, 2026</div>
     <h1>MoneyVaults: Finances & FIRE — User Manual</h1>
     <div class="subtitle">Complete reference guide for personal wealth tracking, Evolution & Trend Curves, interactive Calendar View, compound simulations, stock vaults, and dividends.</div>
 
@@ -144,9 +144,9 @@
         <li><strong>Emergency Fund:</strong> Calculates monthly burn rate and runway months covered.</li>
         <li><strong>Investment:</strong> Simulates compound growth, dividend projections, and capital goals.</li>
         <li><strong>Stock / Equity:</strong> Track ticker symbols, units, average acquisition cost (PRU), live P&L, and dedicated Buy & Sell orders.</li>
-        <li><strong>Expense:</strong> Fastfill-enabled accounts for seamless one-tap daily spending.</li>
+        <li><strong>General Account & Cash Flow Intelligence:</strong> Central clearinghouse for income, expenses, and inter-vault transfers. Premium unlocks <strong>Cash Flow Intelligence</strong> directly inside the General Account details with key analytics: all-time and period record expenses/incomes, top expenditure and revenue tags, period starting and ending balances with net variations (absolute and %), and daily average spending.</li>
       </ul>
-      <p><strong>Vault Sorting & Quick Updates:</strong> Sort vaults by Default order, Balance, Name, or Vault Type. Tap <strong>Update P&L</strong>, <strong>Update Price</strong>, or <strong>Update Base</strong> to open an instant auto-selected numeric input dialog where typing immediately replaces the old figure.</p>
+      <p><strong>Vault Sorting & Drag & Drop Reordering:</strong> In the Premium version, reorder vault cards effortlessly using the 3-dots drag handle (<code>⋮⋮</code>). Your customized sequence is automatically remembered across app restarts, and the <strong>Custom Order</strong> option in the Sort Vaults menu lets you return to your preferred order anytime. You can also sort by Default, Balance, Name, or Vault Type. Tap <strong>Update P&L</strong>, <strong>Update Price</strong>, or <strong>Update Base</strong> to open an instant auto-selected numeric input dialog where typing immediately replaces the old figure.</p>
       <p><strong>Cash Flow Control ("Include in the cash flow" Switch):</strong> Every expense, vault contribution, withdrawal, stock trade, planned item, and recurring rule features a unified <strong>"Include in the cash flow"</strong> switch. Turn it off when logging reimbursed expenses, prepaid card spending, or internal portfolio transfers that shouldn't affect your liquid cash balance.</p>
       <p><strong>Tag Manager:</strong> Create and color-code custom tags to classify transactions and filter views effortlessly.</p>
     </div>
@@ -156,9 +156,11 @@
       <p>Analyze historical and real-time wealth progression through the <strong>Vaults Evolution & Trends</strong> screen:</p>
       <ul>
         <li><strong>Multi-Horizon Evolution Curves:</strong> Inspect individual vaults or your entire portfolio across <strong>1M</strong> (Daily), <strong>3M</strong> (Daily), <strong>YTD</strong> (Weekly), <strong>1Y</strong> (Weekly), and <strong>ALL</strong> (Monthly) horizons.</li>
-        <li><strong>Natural Dual-Curve Scale (Balance & P&L):</strong> Simultaneously compare <strong>Current Balance</strong> and <strong>Profit & Loss (P&L)</strong> on a natural monetary scale with a dashed <code>0</code> baseline and Y-axis reference labels, plus interactive touch-scrubbing tooltips.</li>
+        <li><strong>Natural Dual-Curve Scale with Live P&L % Scrubbing:</strong> Simultaneously compare <strong>Current Balance</strong> and <strong>Profit & Loss (P&L)</strong> on a natural monetary scale with a dashed <code>0</code> baseline and Y-axis reference labels. Dragging your finger across the interactive chart updates the cursor tooltip and recalculates the dynamic P&L percentage (<code>+€XX.XX (+YY.Y%)</code>) in real time for Investment, Stock, and Asset vaults.</li>
+        <li><strong>Comprehensive Performance KPIs:</strong> Refactored KPI metrics clearly report Total P&L, Total P&L %, Period P&L, and Period P&L %. The <strong>Period Change</strong> card explicitly details the total variation separated into net capital inflows versus pure P&L market performance.</li>
         <li><strong>Automated 00:00 Snapshots & FIFO Pruning:</strong> At <code>00:00</code> local time, MoneyVaults captures daily, weekly, and monthly snapshots using First-In-First-Out (FIFO) retention pruning to keep storage ultra-compact. Periods prior to a vault's creation date automatically render at <code>0</code>.</li>
         <li><strong>Monthly Stacked Bar Evolution:</strong> Compare multi-month cumulative balances and monthly net cash flows across 3-month and 6-month windows with native localized month names.</li>
+        <li><strong>Quick Time Filter Reset:</strong> In any Vault Details screen, easily reset custom timeframe drilldowns back to the full history with a single tap on the <strong>Clear Time Filter</strong> button.</li>
       </ul>
     </div>
 
@@ -214,8 +216,8 @@
     <h2>🌐 10. Multi-Language & Universal Currency</h2>
     <p>MoneyVaults natively supports 6 languages (English, Portuguese, Spanish, French, Italian, German) and universal world currencies (&euro;, $, &pound;, R$, &yen;, CHF, etc.) with automatic system matching and on-demand switching.</p>
 
-    <h2>☁️ 11. Data Center & Cloud Backup</h2>
-    <p>Create 1-tap backups to Google Drive, iCloud, or local storage anytime through the <strong>Data Center</strong>. Data—including vaults, transactions, historical evolution snapshots, recurring rules, and custom tags—is exported as clean JSON files that can be restored on any device without loss.</p>
+    <h2>☁️ 11. Data Center, Cloud Backup & Biometric Security</h2>
+    <p>Create 1-tap backups to Google Drive, iCloud, or local storage anytime through the <strong>Data Center</strong>. Data—including vaults, transactions, historical evolution snapshots, recurring rules, and custom tags—is exported as clean JSON files that can be restored on any device without loss. To safeguard against accidental data erasure, triggering a <strong>Backup & Factory Reset</strong> requires mandatory biometric authentication (fingerprint, face unlock, or device PIN).</p>
 
     <h2>👑 12. Membership Plans & 14-Day Free Trial</h2>
     <div class="card">
@@ -224,7 +226,8 @@
         <li><strong>14-Day Free Trial:</strong> All subscription plans (Monthly &euro;5.00, 3-Month &euro;12.50, 6-Month &euro;20.00, Annual &euro;35.00) start with a 14-day risk-free trial. Cancel anytime before Day 14 via Google Play Subscriptions with zero charges.</li>
         <li><strong>Lifetime Access:</strong> &euro;60.00 one-time purchase with permanent unlimited access.</li>
         <li><strong>Day 10 Local Reminder:</strong> Receive an automatic reminder 4 days before renewal.</li>
-        <li><strong>Rewarded Video Passes:</strong> Tap &ldquo;Watch Video for 1m Premium Pass&rdquo; directly below the trial action button to unlock 1-minute full Premium access (up to 5 passes per 24 hours).</li>
+        <li><strong>Rewarded Video Passes:</strong> Tap &ldquo;Watch Video for 30s Premium Pass&rdquo; directly below the trial action button to unlock 30-second full Premium access (up to 5 passes per 24 hours).</li>
+        <li><strong>Automatic Reversion to Defaults:</strong> When a 30-second Pro Pass or subscription ends, all screens, active category filters, custom vault arrangements, time ranges, and view modes automatically revert to standard default configurations.</li>
       </ul>
     </div>
 

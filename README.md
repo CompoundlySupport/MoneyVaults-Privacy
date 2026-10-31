@@ -11,10 +11,10 @@
 
 ## 🌟 Core Features
 
-* **🗄️ Purpose-Built Financial Vaults & Smart Sorting:**  
-  Segment capital into dedicated vaults: **Savings Goals (Piggy Banks)**, **Emergency Runway Funds**, **Investment Portfolios**, **Stock / Equity Vaults**, and **Operational Spending Accounts**. Sort vaults by Default order, Balance, Name, or Vault Type, and update balances, P&L, or share prices instantaneously with auto-selected quick inputs.
-* **📈 Evolution & Trend Curves (1M, 3M, YTD, 1Y, ALL):**  
-  Track individual vaults or your entire portfolio with interactive **Evolution & Trend Curves** across 5 timeframes (**1M** Daily, **3M** Daily, **YTD** Weekly, **1Y** Weekly, and **ALL** Monthly). Compare **Current Balance** and **Profit & Loss (P&L)** simultaneously on a natural monetary scale with a dashed `0` baseline, powered by automated `00:00` local snapshots and ultra-compact **FIFO** retention pruning.
+* **🗄️ Purpose-Built Financial Vaults, Drag & Drop Sorting & Cash Flow Intelligence:**  
+  Segment capital into dedicated vaults: **Savings Goals (Piggy Banks)**, **Emergency Runway Funds**, **Investment Portfolios**, **Stock / Equity Vaults**, and the operational **General Account**. In Premium, reorder vault cards via **Drag & Drop** using the 3-dots handle (`⋮⋮`) with persistent layout memory and a dedicated **"Custom Order"** sort option alongside Default, Balance, Name, and Type. Unlock **Cash Flow Intelligence** in the General Account with deep KPIs: record expenses/incomes of all time and within period, top spending tags, period starting/ending balances, and average daily burn rate. Update balances, P&L, or share prices instantaneously with auto-selected quick inputs.
+* **📈 Evolution & Trend Curves with Live P&L % Scrubbing:**  
+  Track individual vaults or your entire portfolio with interactive **Evolution & Trend Curves** across 5 timeframes (**1M** Daily, **3M** Daily, **YTD** Weekly, **1Y** Weekly, and **ALL** Monthly). Compare **Current Balance** and **Profit & Loss (P&L)** simultaneously on a natural monetary scale with a dashed `0` baseline, powered by automated `00:00` local snapshots and ultra-compact **FIFO** retention pruning. Dragging across the curve recalculates dynamic P&L % in real time for Investment, Stock, and Asset holdings, while refactored KPI cards detail Total P&L, Period P&L, and explicitly separate net capital inflows from net market returns. Reset drilldowns in 1 tap with the **Clear Time Filter** button.
 * **📊 Dedicated Stock & Asset Vaults:**  
   Track individual equity & ETF positions: enter ticker symbols, monitor unit counts, average acquisition cost (PRU), manual market price updates, total invested capital, current market valuation, and unrealized profit/loss (P&L absolute and percentage). Log dedicated Buy & Sell trades with optional cash flow inclusion.
 * **🗓️ Interactive Monthly Calendar View & Cash Flow Hub:**  
@@ -39,9 +39,9 @@
   - Loan Amortization & Early Payoff Table (with maximized remaining principal balance chart)  
   - Smart Discount & Promotional Comparison Tool (100% Free)
 * **👑 Transparent Membership & 14-Day Free Trial:**  
-  Explore MoneyVaults Premium completely risk-free with a **14-day free trial** on all subscription plans (Monthly, 3-Month, 6-Month, Annual), automated Day 10 cancellation reminders, Lifetime Access, or unlock temporary 1-minute passes via rewarded video.
-* **🔒 100% Offline-First Privacy & Data Center:**  
-  Zero account registration required, zero third-party financial tracking. Export and restore your complete portfolio—including historical evolution snapshots—in JSON or backup directly to Google Drive, iCloud, or local storage.
+  Explore MoneyVaults Premium completely risk-free with a **14-day free trial** on all subscription plans (Monthly, 3-Month, 6-Month, Annual), automated Day 10 cancellation reminders, Lifetime Access, or unlock temporary 30-second passes via rewarded video (up to 5 passes per 24h) with automated reversion to standard default views upon expiry.
+* **🔒 100% Offline-First Privacy & Biometric Data Center:**  
+  Zero account registration required, zero third-party financial tracking. Export and restore your complete portfolio—including historical evolution snapshots—in JSON or backup directly to Google Drive, iCloud, or local storage. Factory Reset operations are fortified with mandatory local biometric authentication (fingerprint, face unlock, or PIN) to prevent accidental data loss.
 
 ---
 
