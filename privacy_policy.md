@@ -56,15 +56,15 @@ The calculations, compound interest models, evolution & trend curves, loan amort
 * Past mathematical performance or simulation curves do not guarantee future wealth.
 * You are solely responsible for verifying any figures before making financial commitments. Consult a certified financial planner, accountant, or attorney for professional advice.
 
-### 3. Customer Support on a Best-Effort Basis (Boa Fé)
-Customer support is provided on a **reasonable, voluntary best-effort basis ("boa fé")**. 
+### 3. Customer Support on a Best-Effort Basis (Good Faith)
+Customer support is provided on a **reasonable, voluntary best-effort basis (in good faith)**. 
 * There are no guaranteed response times, formal service level agreements (SLAs), or obligations to implement requested features.
 * We strive to assist users promptly with technical and billing inquiries in good faith.
 
 ### 4. In-App Purchases, Subscriptions & 14-Day Free Trial
 * **14-Day Free Trial:** All auto-renewing subscription options (Monthly, 3-Month, 6-Month, Annual) come with an upfront 14-day risk-free trial. You will not be charged if you cancel at least 24 hours before the 14-day trial concludes.
 * **Trial Reminders:** The App automatically schedules a private local device notification on Day 10 (4 days before renewal) to alert you that your trial is nearing its end.
-* **Pricing Options:** MoneyVaults Premium offers 5 tiers: Monthly (€5.00/mo), 3 Months (€12.50/quarter), 6 Months (€20.00/half-year), Annual (€35.00/year), and Lifetime Access (€60.00 one-time purchase with permanent access). Prices may vary by regional currency and local taxes.
+* **Pricing Options:** MoneyVaults Premium offers 5 flexible tiers: Monthly, 3-Month, 6-Month, and Annual auto-renewing subscriptions, as well as a one-time Lifetime Access purchase. All localized pricing amounts, billing periods, and regional currency conversions are clearly presented in the App and confirmed via Google Play Store checkout prior to purchase.
 * **Rewarded Video Passes:** Users may also unlock temporary 30-second full Premium passes by voluntarily watching short video ads (up to 5 passes per 24 hours) with zero financial charge. Upon expiration of any temporary pass or subscription, all premium configuration states, custom vault arrangements, and specialized filters immediately return to standard default views.
 * **Billing & Renewal:** Payments are processed securely via Google Play In-App Billing. Subscriptions renew automatically unless cancelled in your Google Play Store Account Settings prior to the renewal date.
 * **Cancellation & Refunds:** You can cancel your subscription at any time via Google Play > Payments & Subscriptions > Subscriptions. Refunds are governed strictly by Google Play's standard refund policies.

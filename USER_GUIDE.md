@@ -222,10 +222,10 @@ In the Budget screen, the financial health of your period is calculated exclusiv
 * **Inflows:** All incoming operational cash:
   * **Income:** Salaries, freelancing, and direct cash revenues.
   * **Dividends:** Dividend distributions confirmed to the General Account as spendable cash flow.
-  * **Vault Returns (Retorno dos cofres):** Capital returning to the General Account (withdrawals from Emergency Reserves, redemptions from Piggy Banks, or net proceeds from stock/asset sales).
+  * **Vault Returns:** Capital returning to the General Account (withdrawals from Emergency Reserves, redemptions from Piggy Banks, or net proceeds from stock/asset sales).
 * **Outflows:** All exiting operational cash:
   * **Expenses:** Routine living expenses (groceries, utilities, dining, subscriptions).
-  * **Transfers to Vaults (Transferências para cofres):** Capital allocated away from the General Account to build wealth (savings transferred to Emergency Funds, Piggy Banks, or stock purchases / asset buys).
+  * **Transfers to Vaults:** Capital allocated away from the General Account to build wealth (savings transferred to Emergency Funds, Piggy Banks, or stock purchases / asset buys).
 * **Operational Surplus / Deficit:**
   $$\text{Budget Balance} = \text{Inflows} - \text{Outflows}$$
   * **Surplus (Positive):** Living cash was generated and remained unspent in your checking clearinghouse.
